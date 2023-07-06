@@ -18,7 +18,8 @@
 body {
     font-family: 'quicksand', sans-serif;
     margin: 0;
-    background-color: #f5f5f5
+    background-color: #f5f5f5;
+    overflow-y: hidden;
 }
 
 p {
