@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Illustraties</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="images/illustraties/vault-boys/vault%20me.png"/>
+        <style>
+            #slideshow-container {
+                width: 100vw;
+                height: 90vh;
+                overflow: hidden;
+                white-space: nowrap;
+                position: relative;
+            }
+
+            .piece-container {
+                display: inline-block;
+                width: 65vw;
+                height: 100vh;
+                scroll-snap-align: start;
+                vertical-align: top;
+                overflow: scroll; /* Change 'hidden' to 'scroll' */
+            }
+
+            .piece-container::-webkit-scrollbar {
+                display: none; /* Hide the scrollbar */
+            }
+            .piece {
+                width: 100%;
+                height: 100%;
+            }
+
+            #piece-txt {
+                overflow: auto;
+                white-space: normal;
+            }
+
+            .btn-container {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .btn-container button {
+                   font-family: 'Bebas';
+    font-size: 40px;
+    margin-bottom: -8px;
+    border: none;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+    text-align: left;
+            }
+.btn-container button:hover {
+    color: red;
+    transform: translateY(-5px);
+}
+            .overview {
+                background-color: transparent;
+                position: absolute;
+                left: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .overview-btn {
+                font-family: 'Bebas';
+                font-size: 40px;
+                margin-bottom: -8px;
+                border: none;
+                background-color: transparent;
+                color: black;
+                cursor: pointer;
+                transition: color 0.3s, transform 0.3s;
+                text-align: left;
+            }
+            .overview-btn.active {
+                color: red;
+                transform: translateX(5px);
+            }
+            .overview-btn:hover {
+                color: red;
+                transform: translateX(5px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper zwart">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="C++.html">C++</a></li>
+                        <li class="active"><a href="unity.html">Unity</a></li>
+                        <li><a href="unrealengine.html">Unreal Engine</a></li>
+                        <li><a href="boeken.html">Extras</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+
+        <main>
+
+            <div class="overview">
+                <button class="overview-btn" onclick="scrollToSlide(0)">Hop King</button>
+                <button class="overview-btn" onclick="scrollToSlide(1)">Elders Demise</button>
+                <button class="overview-btn" onclick="scrollToSlide(2)">Buddy Jumping</button>
+                <button class="overview-btn" onclick="scrollToSlide(3)">Elders' Vendetta</button>
+            </div>
+            <div id="slideshow-container">
+                <div class="piece-container">
+                    <div class="piece" id="hopking">
+                        <h1>&gt; Hop King</h1>
+                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/ayLXqarl1Rk" title="Banjo: Hop King - Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div id="piece-txt">
+
+                            <h2>Motivation</h2>
+                            <p>Hop King in Unity was my first completed game. At the time I was a great Jump King fan and with some extra time on my hand I had set out to make a Jump King copy, but gave myself a week to do so. The project has a special place in my heart. It made me realize that making games wasn’t something out of reach for me anymore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="eldersdemise">
+                        <h1>&gt; Elders Demise</h1>
+                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/M-Z3W0hYGFA" title="[BACHELOR PROJECT] Elders Demise - Demo Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div id="piece-txt">
+                            <h2>About</h2>
+                            <p>Elders Demise was an ambitious project that I embarked on for my bachelor’s project at KdG University of Applied Sciences. Inspired by Arkane Studios' renowned title, Dishonored, I took it upon myself to create a game world and story from scratch. 
+                                This project served as a personal challenge to test my capabilities and determine if I had what it takes to become a AAA developer. I knew I had very little knowledge in the field, but during this period I was learning a lot about myself on an academic level. I had recently had the revelation that I can learn anything I want to, and so, I wanted to put this hypothesis to the test.
+                                Throughout the intensive six-month development period, I encountered numerous challenges, learning about them and solving them only kept fueling my growing passion for game development.
+                                While reflecting on the project, I acknowledge that there are many areas where it may still fall short, but it served as a significant catalyst for accelerating my growth as a game developer. Elders Demise became a pivotal milestone in my journey, amplifying my learning process and serving as one of my proudest achievements.
+                                Take a look at the Game Design Document! & Give it a try
+                                [doc] [download link]
+                            </p>
+                            <h2>Motivation</h2>
+                            <p>y Arkane Studios' renowned title, Dishonored, I took it upon myself to create a game world and story from scratch. 
+                                This project served as a personal challenge to test my capabilities and determine if I had what it takes to become a AAA developer. I knew I had very little knowledge in the field, but during this period I was learning a lot about myself on an academic level. I had recently had the revelation that I can learn anything I want to, and so, I wanted to put this hypothesis to the test.
+                                Throughout the intensive six-month development period, I encountered numerous challenges, learning about them and solving them only kept fueling my growing passion for game development.
+                                While reflecting on the project, I acknowledge that there are many areas where it may still fall short, but it served as a significant catalyst for accelerating my growth as a game developer. Elders Demise became a pivotal milestone in my journey, amplifying my learning process and serving as one of my proudest achievements.
+                                Take a look at the 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="piece-container">
+                    <div class="piece" id="buddyjumping">
+                        <h1>&gt; Buddy Jumping</h1>
+                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/fcqpo1HlHwE" title="Project Mechanics - Prototype Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div id="piece-txt">
+                            <p>As an intern gameplay programmer at Frosty Froggs, I had the exciting chance to design and develop my own game for the company. This project proved to be a valuable learning experience, opening my eyes to crucial aspects of game development that I had not previously considered.
+                                First and foremost, it taught me the importance of designing a game with the consumer experience in mind, specifically tailoring it to a specific target audience. Understanding the preferences and expectations of players enabled me to create a more engaging and enjoyable experience, enhancing the overall appeal of the game.
+                                Additionally, this project provided an opportunity for me to work closely with a mentor, who played a pivotal role in guiding me throughout the development process. Collaborating with my mentor allowed me to seek feedback, ask questions, and actively listen to their expertise. This experience was particularly valuable as it transitioned me from being a predominantly solo developer to understanding the significance of teamwork and mentorship in fostering personal and professional growth.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="piece-container">
+                    <div class="piece" id="mechanics">
+                        <h1>&gt; Elders Vendetta</h1>
+                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/fcqpo1HlHwE" title="Project Mechanics - Prototype Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div id="piece-txt">
+                            <p>Project Mechanics marked my return to Unity after predominantly focusing on C++ development at HowestDAE. Drawing upon my year of learning at DAE and leveraging my prior experience in developing Elders Demise, Project Mechanics became a platform for me to assess my skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button id="prev-btn">Previous</button>
+                <button id="next-btn">Next</button>
+            </div>
+        </main>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const container = document.getElementById("slideshow-container");
+                const pieceContainers = Array.from(document.getElementsByClassName("piece-container"));
+                const overviewButtons = Array.from(document.getElementsByClassName("overview-btn"));
+
+                container.style.width = `${pieceContainers.length * 100}vw`;
+
+                let currentSlide = 0;
+
+                function scrollToSlide(index) {
+                    if (index >= 0 && index < pieceContainers.length) {
+                        container.scrollTo({
+                            left: pieceContainers[index].offsetLeft,
+                            behavior: "smooth"
+                        });
+
+                        // Remove active class from all buttons
+                        overviewButtons.forEach(btn => btn.classList.remove("active"));
+
+                        // Add active class to the corresponding button
+                        overviewButtons[index].classList.add("active");
+
+                        currentSlide = index;
+                    }
+                }
+
+                overviewButtons.forEach((btn, index) => {
+                    btn.addEventListener("click", function () {
+                        scrollToSlide(index);
+                    });
+                });
+
+                document.getElementById("next-btn").addEventListener("click", function () {
+                    if (currentSlide < pieceContainers.length - 1) {
+                        scrollToSlide(currentSlide + 1);
+                    }
+                });
+
+                document.getElementById("prev-btn").addEventListener("click", function () {
+                    if (currentSlide > 0) {
+                        scrollToSlide(currentSlide - 1);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
