@@ -1,8 +1,10 @@
 /*Sacha Gonzalez*/
-
+:root{
+    --orange: #F5845E;
+}
 @font-face {
- font-family: 'quicksand';
-  src: url(quicksand.otf);
+    font-family: 'quicksand';
+    src: url(quicksand.otf);
 }
 
 @font-face {
@@ -18,7 +20,11 @@
 body {
     font-family: 'quicksand', sans-serif;
     margin: 0;
-    background-color: #f5f5f5;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F1F1F2;
     overflow-y: hidden;
 }
 
@@ -28,7 +34,7 @@ p {
 }
 
 .zwart {
-    background-color: #000
+    background-color: #333132
 }
 
 header, main, footer {
@@ -37,28 +43,50 @@ header, main, footer {
 }
 
 header {
-    height: 50px;
     display: flex;
-    margin: 0 auto;
+    justify-content: center; /* Center the navbar items */
     align-items: center;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Horizontally center the navigation */
 }
 
 nav ul {
     display: flex;
     list-style: none;
+    padding: 0;
+    justify-content: center; /* Horizontally center the list items within the navigation */
+}
+
+nav ul li {
+    margin-right: 20px;
 }
 
 nav ul a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    margin-right: 20px;
-    
+    padding-bottom: 10px;
+    border-bottom: 4px transparent solid;
+}
+
+.active a,
+nav a:hover {
+    border-bottom: 4px #fff solid;
+    color: var(--orange);
 }
 
 .active a, nav a:hover {
     border-bottom: 4px #fff solid; 
     padding-bottom: 10px;
+    border-bottom-color: var(--orange);
 }
 
 main { 
@@ -71,19 +99,34 @@ main {
 h1 { font-family: 'Geometos';
     font-size: 26px;
     margin-bottom: 5px;
+    color: #333132;
 }
 
 h2 { margin: 0; padding: 0;}
 h3 { margin-top: 5px; padding: 5px;}
+#index {
+    display: flex;
+    position: relative;
+}
 
-#index {display: flex;}
-#identity {margin-top: auto;}
+#identity {
+    position: absolute;
+    top: 50%; /* Vertically center the image */
+    transform: translateY(-50%); /* Adjust vertical positioning */
+    margin-right: 20px; /* Add some space between the image and text */
+}
+
+#hometxt {
+    display: flex; /* Display the content as a flex container */
+    flex-direction: column; /* Stack the text vertically */
+    align-items: flex-start; /* Align the text to the left */
+    margin-left: 400px; /* Adjust the distance from the image */
+}
+
 #right p { 
     font-size: 20px;
     margin-top: 0;
 }
-#right { margin-top: 10px; margin-left: 20px;}
-
 #block {display: block;}
 
 #drop {display: flex;}
@@ -112,7 +155,7 @@ h3 { margin-top: 5px; padding: 5px;}
     margin-top: auto; 
     margin-bottom: auto;
     background-color: rgba(245, 245, 245, 0.2);
-    color: black;
+    color: #333132;
 }
 
 
@@ -183,8 +226,8 @@ h3 { margin-top: 5px; padding: 5px;}
     height: 758px;
     overflow: hidden;
     position: relative;
-    
-    
+
+
 }
 .fusionslide > * {
     position: absolute;
@@ -268,50 +311,194 @@ textarea {
 #verzenden {width: 100%; height: 50px; background-color: #ed1651; color: white;}
 
 
+
+#slideshow-container {
+    margin-top: 10vh;
+    width: 100vw;
+    height: calc(80vh - 80px); /* Subtract the height of the black border */
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.piece-container {
+    display: inline-block;
+    width: 65vw;
+    height: 100%;
+    scroll-snap-align: start;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.piece-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.piece {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 80px; /* Add padding to account for the black border */
+}
+.piece > * {
+    flex: 1;
+}
+.video-container {
+    width: 70%; 
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#piece-txt {
+    padding-left: 20px;
+    overflow: auto;
+    white-space: normal;
+}
+* Add this line to ensure the buttons appear above other elements */
+}
+
+.btn-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; 
+}
+
+.btn-container button {
+    font-family: 'Geometos';
+    font-size: 40px;
+    margin-bottom: -8px;
+    border: none;
+    background-color: transparent;
+    color: #333132;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+    text-align: left;
+    z-index: 1; 
+}
+.btn-container button:hover {
+    color: red;
+    transform: translateY(-5px);
+}
+.overview {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    padding-bottom: 80px; /* Add padding to account for the black border */
+}
+.overview-btn {
+    border: 2px solid transparent;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.overview-btn img {
+    width: 100px; 
+    border: 2px solid transparent;
+}
+
+.overview-btn.active img {
+    border-color: red; 
+}
+
+.overview-btn img:hover {
+    border-color: red;
+}
+.overview-btn:hover {
+    transform: translateY(-5px);
+}
+
+
+/* INDEX */
+
+.navbar-group {
+    display: flex;
+}
+
+.navbar-buttons {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-right: 50vw; /* Add desired distance between buttons */
+}
+
+.navbar-download-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar-download-button:hover {
+    background-color: #ed1651;
+    color: white;
+}
+
+.slideshow-content .slide {
+  display: none;
+}
+
+.slideshow-content .slide:first-child {
+  display: block;
+}
 /* 
 @media screen and (max-width:1080px){
-    main, header {width: 100%;}
-    header {height: 5%;}
-    header a {font-size: 30px;}
-    #identity {width: 50%; margin-top: auto; margin-left: auto; margin-right: auto;}
-    #index {flex-direction: column-reverse;}
-    #right { margin-left: 5%; margin-right: 5%;}
-    #quote {text-align: center;}
-    #quote h1 {font-size: 200%}
-    #quote h2 {font-size: 100%;}
-    #quote p {font-size: 80%}
-    #drop {display:block; }
-    #drop img { display: block; margin-top: 5%; margin-left: auto; margin-right: auto; width: 100%; }
-    #drop p {margin-right: 5%; margin-left: 5%;}
-    #black-magic img {width: 90%;}
-    #black-magic p {text-align: left; margin-left: 5%; margin-right: 5%;}
-    #boys {width: 100%; margin-top: 2%;}
-    #vaults {width: 80%;}
-    #boys p {width: 90%; margin-left: 5%; margin-right: 5%;}
-    #creative-space p {margin-left: 5%; margin-right: 5%;}
-    #art1 {width: 80%; margin-left: 10%; margin-right: 10%;}
-    #art2 {width: 80%; height: 80%; margin-left: 10%; margin-right: 10%;}
-    #cube {display: block; margin-top: 3%; margin-bottom: 10%;}
-    #cubeimg {width: 90%; height: auto; margin-left: auto; margin-right: auto; margin-bottom: 5%;}
-    #cube-txt {margin-left: 5%; margin-right: 5%; padding: 1%;}
-    #rose {display: block; margin-top: 1%; margin-bottom: 10%;}
-    #penrose {width: 90%; height: auto; margin-left: auto; margin-right: auto; margin-bottom: 0;}
-    #penrose-txt {margin-left: 10%; margin-right: 10%; padding: 1%;}
-    #home {display: block; margin-left: auto; margin-right: auto; width: 80%;}
-    .homeslide {width: 100%; margin-top: 10%; margin-left: auto; margin-right: auto;}
-    #fusion {display: block; margin-top: 40%; margin-left: auto; margin-right: auto; width: 80%;}
-    .fusionslide {margin-left: auto; margin-right: auto;}
-    #expix {width: 80%; margin-left: auto; margin-right: auto;}
-    #expix img {width: 100%;}
-    #space {width: 80%; flex-direction: column-reverse; margin-left: auto; margin-right: auto;}
-    #spaceage { margin-left: auto; margin-right: auto;}
-    #space-txt {text-align: center; }
-    #contactpage {flex-direction: column; }
-    #adress {width: 80%; margin-left: auto; margin-right: auto; margin-top: 10%;}
-    #adress img {width: 5%;}
-    #contact {width: 80%; margin-top: 10%; margin-left: auto; margin-right: auto;}
-    #contactpage {margin-top: 0;}
-    textarea {width: 80%;}
-    #verzenden {width: 100%; height: 50%; font-size: 300%; margin-bottom: 10%;}
+main, header {width: 100%;}
+header {height: 5%;}
+header a {font-size: 30px;}
+#identity {width: 50%; margin-top: auto; margin-left: auto; margin-right: auto;}
+#index {flex-direction: column-reverse;}
+#right { margin-left: 5%; margin-right: 5%;}
+#quote {text-align: center;}
+#quote h1 {font-size: 200%}
+#quote h2 {font-size: 100%;}
+#quote p {font-size: 80%}
+#drop {display:block; }
+#drop img { display: block; margin-top: 5%; margin-left: auto; margin-right: auto; width: 100%; }
+#drop p {margin-right: 5%; margin-left: 5%;}
+#black-magic img {width: 90%;}
+#black-magic p {text-align: left; margin-left: 5%; margin-right: 5%;}
+#boys {width: 100%; margin-top: 2%;}
+#vaults {width: 80%;}
+#boys p {width: 90%; margin-left: 5%; margin-right: 5%;}
+#creative-space p {margin-left: 5%; margin-right: 5%;}
+#art1 {width: 80%; margin-left: 10%; margin-right: 10%;}
+#art2 {width: 80%; height: 80%; margin-left: 10%; margin-right: 10%;}
+#cube {display: block; margin-top: 3%; margin-bottom: 10%;}
+#cubeimg {width: 90%; height: auto; margin-left: auto; margin-right: auto; margin-bottom: 5%;}
+#cube-txt {margin-left: 5%; margin-right: 5%; padding: 1%;}
+#rose {display: block; margin-top: 1%; margin-bottom: 10%;}
+#penrose {width: 90%; height: auto; margin-left: auto; margin-right: auto; margin-bottom: 0;}
+#penrose-txt {margin-left: 10%; margin-right: 10%; padding: 1%;}
+#home {display: block; margin-left: auto; margin-right: auto; width: 80%;}
+.homeslide {width: 100%; margin-top: 10%; margin-left: auto; margin-right: auto;}
+#fusion {display: block; margin-top: 40%; margin-left: auto; margin-right: auto; width: 80%;}
+.fusionslide {margin-left: auto; margin-right: auto;}
+#expix {width: 80%; margin-left: auto; margin-right: auto;}
+#expix img {width: 100%;}
+#space {width: 80%; flex-direction: column-reverse; margin-left: auto; margin-right: auto;}
+#spaceage { margin-left: auto; margin-right: auto;}
+#space-txt {text-align: center; }
+#contactpage {flex-direction: column; }
+#adress {width: 80%; margin-left: auto; margin-right: auto; margin-top: 10%;}
+#adress img {width: 5%;}
+#contact {width: 80%; margin-top: 10%; margin-left: auto; margin-right: auto;}
+#contactpage {margin-top: 0;}
+textarea {width: 80%;}
+#verzenden {width: 100%; height: 50%; font-size: 300%; margin-bottom: 10%;}
 }
 */

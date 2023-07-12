@@ -2,60 +2,132 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Beelden</title>
+    <title>Sacha Gonzalez De Muer | Unreal Engine Projects</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="images/illustraties/vault-boys/vault%20me.png"/>
 </head>
-<body class="beelden">
-  
-   <div class="wrapper zwart">
-    <header>
-        <nav>
-            <ul>
-                <li ><a href="index.html">Home</a></li>
-                <li><a href="C++.html">C++</a></li>
-                <li><a href="unity.html">Unity</a></li>
-                <li class="active"><a href="unreal.html">Unreal Engine</a></li>
-                <li><a href="extras.html">Extras</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    </div>
-    
-   <main>
-   <div id="cube">
-        <div id="cubeimg">
-        <h1>Tinkerer's Automaton</h1>
-         <iframe width="1080" height="645" src="https://www.youtube.com/embed/dCKSgP1XP5s" title="Tinkerer&#39;s Automaton (Prototype)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<body>
+        <div class="wrapper zwart">
+             <header>
+                <div class="navbar-group">
+                    <nav>
+                        <ul class="navbar-buttons">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="C++.html">C++</a></li>
+                            <li><a href="unity.html">Unity</a></li>
+                            <li class="active"><a href="unrealengine.html">Unreal Engine</a></li>
+                            <li><a href="extras.html">Extras</a></li>
+                            <li><a href="resume.html">Resume</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="#" class="navbar-download-button">DOWNLOAD CV</a>
+            </header>
         </div>
-    <div id="cube-txt">
-           <p>Dit is een beeld voor een techno feest, de klant had een moodbord verstuurd waarin duidelijk was dat hij zocht voor een ontwerp met 3D
-elementen. Uit dat moodboard heb ik 2 afbeeldingen genomen en deze geplaatst in een zelf verzonnen onmogelijke cubus illustratie waarin
-het logo van de organisatie in past. <br>Het 3D element heb ik aangenomen door bepaalde delen van de beelden uit de cubus te laten komen.
-Het logo en de typo zijn gemaakt door Jens De Craeker.</p>
-      
-       </div>
-       </div>
-   </main>
-   
-   <div>
-   <main>
-   <div id="rose">
-        <div id="penrose">
-          <h1>Atto</h1>
-<iframe width="1147" height="645" src="https://www.youtube.com/embed/0Ce7aYM0SNM" title="Atto (Prototype)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        </div>
-           
-    <div id="penrose-txt">
-           <p>Dit project is gelijkaardig aan het beeld van Verdwaald, de Penrose driehoek is onderdeel van een schoolopdracht waarin we vrij beelden in
-de driehoek mochten verwerken en te leven laten komen door deze beelden uit de driehoek te doen komen. De achtergrond heb ik gemaakt
-in Photoshop en heb ik de kleuren gebasseerd op een 80’s Miami stijl en voor de glitch effect heb ik me gebasseerd op hoe oude VHS
-kassetten beeld afbeelden.</p>
-      
-       </div>
-       </div>
-    
-       </main>
-       </div>
-    </body>
+
+        <main>
+            <div id="slideshow-container">
+                <div class="piece-container"> 
+                    <h1>&gt; Tinkerer's Automaton</h1>
+                    <div class="piece" id="tinkerers">
+                        <iframe width="720" height="480" src="https://www.youtube.com/embed/dCKSgP1XP5s" title="Tinkerer&#39;s Automaton (Prototype)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div id="piece-txt">
+                            <h2>About</h2>
+                            <p>> Tinkerers Automaton is a rogue-like where the player must protect a defenseless AI companion from a horde of attackers using abilities that are given and upgraded during the game.</p>
+                            <p>As a part of a game design course, this project focused on iterative development. Drawing inspiration from various game design concepts, the aim was to refine and enhance the game throughout the development process. By incorporating these concepts, the project aimed to apply foundational principles of game design and gain practical experience in the iterative design process.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="piece-container">                 
+                    <h1>&gt; Atto</h1>
+                    <div class="piece" id="atto">
+                        <iframe width="720" height="480"  src="https://www.youtube.com/embed/0Ce7aYM0SNM" title="Atto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div id="piece-txt">
+                            <h2>About</h2>
+                            <p>
+                               > Atto is a pint-sized champion who fearlessly confronts formidable adversaries by cunningly targeting their vulnerable points. 
+                                This project was my introduction to Unreal Engine and blueprints and served as a steppingstone to developing Tinkerer’s Automaton. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <h1>&gt; Monte Carlo Search Tree</h1>
+                    <div class="piece" id="mcts">
+                        <img src="images/gif/mcts.gif" alt="GP Research GIF">
+                        <div id="piece-txt">
+                            <h2>About</h2>
+                            <p>
+                               > Embarking on a research project as part of the Gameplay Programming course at HowestDAE, I wanted to learn about chess AI engines. After some research, I found out that MCTS is a good starting point to dive into this topic. Since chess was over scope for this project I chose to apply it to Connect 4.</p>
+                            <a href="https://github.com/Sacha-Gonzalez-DeMuer/GPP_MonteCarloSearchTree" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overview">
+                <div class="btn-container">
+                    <button id="prev-btn"><</button>
+                </div>
+                <button class="overview-btn" onclick="scrollToSlide(0)">
+                    <img src="images/logos/tinkerersautomaton.png" alt="Tinkerer's Automaton" data-slide-index="0">
+                </button>
+                <button class="overview-btn" onclick="scrollToSlide(1)">
+                    <img src="images/logos/atto.png" alt="Atto" data-slide-index="1">
+                </button>
+                <button class="overview-btn" onclick="scrollToSlide(2)">
+                    <img src="images/logos/buddyjumpingpng.png" alt="Buddy Jumping" data-slide-index="2">
+                </button>
+                <div class="btn-container">
+                    <button id="next-btn">></button>
+                </div>
+            </div>
+        </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById("slideshow-container");
+            const pieceContainers = Array.from(document.getElementsByClassName("piece-container"));
+            const overviewButtons = Array.from(document.getElementsByClassName("overview-btn"));
+
+            container.style.width = `${pieceContainers.length * 100}vw`;
+
+            let currentSlide = 0;
+
+            function scrollToSlide(index) {
+                if (index >= 0 && index < pieceContainers.length) {
+                    container.scrollTo({
+                        left: pieceContainers[index].offsetLeft,
+                        behavior: "smooth"
+                    });
+
+                    // Remove active class from all buttons
+                    overviewButtons.forEach(btn => btn.classList.remove("active"));
+
+                    // Add active class to the corresponding button
+                    overviewButtons[index].classList.add("active");
+
+                    currentSlide = index;
+                }
+            }
+
+            overviewButtons.forEach((btn, index) => {
+                btn.addEventListener("click", function () {
+                    scrollToSlide(index);
+                });
+            });
+
+            document.getElementById("next-btn").addEventListener("click", function () {
+                if (currentSlide < pieceContainers.length - 1) {
+                    scrollToSlide(currentSlide + 1);
+                }
+            });
+
+            document.getElementById("prev-btn").addEventListener("click", function () {
+                if (currentSlide > 0) {
+                    scrollToSlide(currentSlide - 1);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

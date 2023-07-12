@@ -5,124 +5,24 @@
         <title>Illustraties</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="images/illustraties/vault-boys/vault%20me.png"/>
-        <style>
-            #slideshow-container {
-                margin-top: 10vh;
-                width: 100vw;
-                height: 90vh;
-                overflow: hidden;
-                white-space: nowrap;
-                position: relative;
-            }
 
-            .piece-container {
-                display: inline-block;
-                width: 65vw;
-                height: 100vh;
-                scroll-snap-align: start;
-                vertical-align: top;
-                overflow: hidden; /* Change 'hidden' to 'scroll' */
-            }
-
-            .piece-container::-webkit-scrollbar {
-                display: none; /* Hide the scrollbar */
-            }
-
-            .piece {
-                display: flex; /* Add flex display */
-                align-items: flex-start; /* Align items to the top */
-                width: 100%;
-                height: 100%;
-            }
-
-            .video-container {
-                width: 70%; /* Adjust width as needed */
-            }
-
-            .video-container iframe {
-                width: 100%;
-                height: 100%;
-            }
-
-            #piece-txt {
-                flex: 1; /* Take remaining width */
-                padding-left: 20px; /* Add some padding for spacing */
-                overflow: auto;
-                white-space: normal;
-            }
-            * Add this line to ensure the buttons appear above other elements */
-            }
-
-            .btn-container {
-                position: absolute;
-                bottom: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 1; /* Add this line to ensure the buttons appear above other elements */
-            }
-
-            .btn-container button {
-                font-family: 'Geometos';
-                font-size: 40px;
-                margin-bottom: -8px;
-                border: none;
-                background-color: transparent;
-                color: black;
-                cursor: pointer;
-                transition: color 0.3s, transform 0.3s;
-                text-align: left;
-                z-index: 1; /* Add this line to ensure the buttons appear above other elements */
-            }
-            .btn-container button:hover {
-                color: red;
-                transform: translateY(-5px);
-            }
-            .overview {
-                background-color: transparent;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                bottom: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 1;
-            }
-
-            .overview-btn {
-                border: 2px solid transparent;
-                padding: 5px;
-                background-color: transparent;
-            }
-
-            .overview-btn img {
-                width: 100px; /* Adjust the image size as needed */
-                border: 2px solid transparent;
-            }
-
-            .overview-btn.active img {
-                border-color: red; /* Highlight color when selected */
-            }
-            .overview-btn:hover {
-                color: red;
-                transform: translateY(-5px);
-            }
-        </style>
     </head>
     <body>
         <div class="wrapper zwart">
             <header>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="C++.html">C++</a></li>
-                        <li class="active"><a href="unity.html">Unity</a></li>
-                        <li><a href="unrealengine.html">Unreal Engine</a></li>
-                        <li><a href="boeken.html">Extras</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+                <div class="navbar-group">
+                    <nav>
+                        <ul class="navbar-buttons">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="C++.html">C++</a></li>
+                            <li class="active"><a href="unity.html">Unity</a></li>
+                            <li><a href="unrealengine.html">Unreal Engine</a></li>
+                            <li><a href="extras.html">Extras</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="#" class="navbar-download-button">DOWNLOAD CV</a>
             </header>
         </div>
 
