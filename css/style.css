@@ -98,12 +98,11 @@ main {
 
 h1 { font-family: 'Geometos';
     font-size: 26px;
-    margin-bottom: 5px;
     color: #333132;
 }
 
-h2 { margin: 0; padding: 0;}
-h3 { margin-top: 5px; padding: 5px;}
+h2 { margin-top: -10; padding: 0; }
+
 #index {
     display: flex;
     position: relative;
@@ -321,6 +320,7 @@ textarea {
     position: relative;
 }
 
+
 .piece-container {
     display: inline-block;
     width: 65vw;
@@ -332,6 +332,14 @@ textarea {
 
 .piece-container::-webkit-scrollbar {
     display: none; 
+}
+
+.embed-responsive {
+    height: 480px;
+}
+
+.link-buttons {
+    direction: rtl;
 }
 
 .piece {
@@ -358,7 +366,6 @@ textarea {
     overflow: auto;
     white-space: normal;
 }
-* Add this line to ensure the buttons appear above other elements */
 }
 
 .btn-container {
@@ -421,6 +428,31 @@ textarea {
 }
 
 
+
+/* TAGS */
+
+.tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  color: #333333;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.tag-cpp {
+  background-color: #659BD3; /* Red background */
+    color: white;
+}
+
+.tag-art {
+  background-color: #FFF08B; /* Yellow background */
+}
+
+
 /* INDEX */
 
 .navbar-group {
@@ -455,6 +487,68 @@ textarea {
 .slideshow-content .slide:first-child {
   display: block;
 }
+
+   .slideshow {
+        position: relative;
+    }
+
+    .slideshow-prev-btn,
+    .slideshow-next-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        border: none;
+        font-size: 24px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    .slideshow-prev-btn {
+        left: 10px;
+        color: var(--orange);
+    }
+
+    .slideshow-next-btn {
+        right: 10px;
+        color: var(--orange);
+    }
+.link-buttons {
+  margin-top: 10px;
+}
+.button {
+        display: inline-block;
+        background-color: #333333;
+        color: #ffffff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-right: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: #555555;
+    }
+
+    .git-link-btn {
+        background-color: #6469B0;
+    }
+
+    .download-demo-btn {
+        background-color: var(--orange);
+    }
+</style>
+
+<div class="link-buttons">
+    <a href="https://github.com/your-github-repo" class="button" id="git-link-btn">GitHub</a>
+    <a href="/path-to-download" class="button" id="download-demo-btn">Download Demo</a>
+</div>
+In this
+
+
+
+
 /* 
 @media screen and (max-width:1080px){
 main, header {width: 100%;}
