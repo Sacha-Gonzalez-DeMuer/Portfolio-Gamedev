@@ -7,6 +7,39 @@
     src: url(quicksand.otf);
 }
 
+/* Regular */
+@font-face {
+    font-family: 'acumin';
+    src: url(Acumin-RPro.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'acumin';
+    src: url(Acumin-BdPro.otf) format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'acumin';
+    src: url(Acumin-ItPro.otf) format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Bold Italic */
+@font-face {
+    font-family: 'acumin';
+    src: url(Acumin-BdItPro.otf) format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
 @font-face {
     font-family: 'Geometos';
     src: url(Geometos.ttf);
@@ -18,19 +51,18 @@
 }
 
 body {
-    font-family: 'quicksand', sans-serif;
+    font-family: 'acumin', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-color: #F1F1F2;
-    overflow-y: hidden;
 }
 
 p {
-    font-family: 'quicksand';
-    font-size: 16px;
+    font-family: 'acumin';
+    font-size: 14px;
 }
 
 .zwart {
@@ -38,7 +70,7 @@ p {
 }
 
 header, main, footer {
-    width: 65vw;
+    width: 75vw;
     margin: 0px;
 }
 
@@ -95,13 +127,20 @@ main {
     align-content: center;
 }
 
-
-h1 { font-family: 'Geometos';
+h1 {
+    font-family: 'Geometos';
     font-size: 26px;
     color: #333132;
 }
 
-h2 { margin-top: -10; padding: 0; }
+h2 {
+    padding: 0;
+}
+
+h2 a {
+    font-weight: bold;
+    color: inherit; /* Optional: inherit the color from the surrounding text */
+}
 
 #index {
     display: flex;
@@ -158,126 +197,6 @@ h2 { margin-top: -10; padding: 0; }
 }
 
 
-#home {display: flex; margin-top: 200px; margin-bottom: 250px;}
-#home-txt {margin: 20px;}
-
-.homeslide { 
-    display: block;
-    width: 787px;
-    height: 519px;
-    overflow: hidden;
-    position: relative;
-}
-
-.homeslide > * {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    animation: slide 12s infinite;
-    overflow: hidden;
-}
-#homeslide:nth-child(1) {
-    left:  0%;
-    animation-delay: -1s;
-    background-image: url(../images/boeken-flyers/kookboek/boek1.jpg);
-    background-size: cover;
-    background-position: center;
-}
-#homeslide:nth-child(2) {
-    left:  0%;
-    animation-delay: 2s;
-    background-image: url(../images/boeken-flyers/kookboek/boek2.jpg);
-    background-size: cover;
-    background-position: center;
-}
-#homeslide:nth-child(3) {
-    animation-delay: 5s;
-    background-image: url(../images/boeken-flyers/kookboek/mockup1.png);
-    background-size: cover;
-    background-position: center;
-}
-#homeslide:nth-child(4) {
-    left:  0%;
-    animation-delay: 8s;
-    background-image: url(../images/boeken-flyers/kookboek/mockup2.png);
-    background-size: cover;
-    background-position: center;
-}
-@keyframes slide {
-    0% { left: 100%; width: 100%;}
-    5% { left: 0%;}
-    25% { left: 0%;}
-    30% { left: -100%; width: 100%;}
-    30.0001% { left: -100%; width: 0%;}
-    100% { left: 100%; width: 0%;}
-}
-
-
-
-#fusion { display: flex; margin-bottom: 300px;}
-#fusion-txt {margin: 20px;}
-#fusion-txt img {width: 100%;}
-
-.fusionslide { 
-    display: block;
-    width: 536px;
-    height: 758px;
-    overflow: hidden;
-    position: relative;
-
-
-}
-.fusionslide > * {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    animation: slide 12s infinite;
-    overflow: hidden;
-}
-#fusionslide:nth-child(1) {
-    left:  0%;
-    animation-delay: -1s;
-    background-image: url(../images/boeken-flyers/huisstijlboek/fusion1.jpg);
-    background-size: cover;
-    background-position: center;
-}
-#fusionslide:nth-child(2) {
-    left:  0%;
-    animation-delay: 2s;
-    background-image: url(../images/boeken-flyers/huisstijlboek/fusion2.jpg);
-    background-size: cover;
-    background-position: center;
-}
-#fusionslide:nth-child(3) {
-    animation-delay: 5s;
-    background-image: url(../images/boeken-flyers/huisstijlboek/fusion3.jpg);
-    background-size: cover;
-    background-position: center;
-}
-#fusionslide:nth-child(4) {
-    left:  0%;
-    animation-delay: 8s;
-    background-image: url(../images/boeken-flyers/huisstijlboek/fusion4.jpg);
-    background-size: cover;
-    background-position: center;
-}
-@keyframes slide {
-    0% { left: 100%; width: 100%;}
-    5% { left: 0%;}
-    25% { left: 0%;}
-    30% { left: -100%; width: 100%;}
-    30.0001% { left: -100%; width: 0%;}
-    100% { left: 100%; width: 0%;}
-}
-
-
-#expix {margin-bottom: 150px;}
-
-#space {display: flex; text-align: right; margin-bottom: 100px;}
-#space-txt { padding: 0 20px; margin-top: auto; margin-bottom: auto;}
-
 #contactpage {display: flex; margin-top: 200px;;}
 
 #adress img {width: 2%}
@@ -312,9 +231,8 @@ textarea {
 
 
 #slideshow-container {
-    margin-top: 10vh;
     width: 100vw;
-    height: calc(80vh - 80px); /* Subtract the height of the black border */
+    height: 80vh; 
     overflow: hidden;
     white-space: nowrap;
     position: relative;
@@ -323,7 +241,7 @@ textarea {
 
 .piece-container {
     display: inline-block;
-    width: 65vw;
+    width: 75vw;
     height: 100%;
     scroll-snap-align: start;
     vertical-align: top;
@@ -392,6 +310,9 @@ textarea {
     color: red;
     transform: translateY(-5px);
 }
+
+/* OVERVIEW */
+
 .overview {
     background-color: transparent;
     display: flex;
@@ -399,12 +320,14 @@ textarea {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    padding-bottom: 80px; /* Add padding to account for the black border */
+    padding-bottom: 20px; 
+    margin: auto; 
 }
+
 .overview-btn {
     border: 2px solid transparent;
     padding: 5px;
@@ -412,7 +335,7 @@ textarea {
 }
 
 .overview-btn img {
-    width: 100px; 
+    width: 70px; 
     border: 2px solid transparent;
 }
 
@@ -423,11 +346,10 @@ textarea {
 .overview-btn img:hover {
     border-color: red;
 }
+
 .overview-btn:hover {
     transform: translateY(-5px);
 }
-
-
 
 /* TAGS */
 
@@ -436,8 +358,9 @@ textarea {
 }
 
 .tag {
+background-color: #FCAB95;
   display: inline-block;
-  color: #333333;
+  color: white;
   padding: 5px 10px;
   border-radius: 20px;
   margin-right: 5px;
@@ -449,8 +372,15 @@ textarea {
 }
 
 .tag-art {
+    color: #333333;
   background-color: #FFF08B; /* Yellow background */
 }
+
+.tag-csharp {
+    background-color: #9A4891;
+    color: white;
+}
+
 
 
 /* INDEX */
@@ -467,6 +397,7 @@ textarea {
 }
 
 .navbar-download-button {
+    font-weight: lighter;
     padding: 10px 20px;
     background-color: white;
     color: black;
@@ -544,55 +475,4 @@ textarea {
     <a href="https://github.com/your-github-repo" class="button" id="git-link-btn">GitHub</a>
     <a href="/path-to-download" class="button" id="download-demo-btn">Download Demo</a>
 </div>
-In this
 
-
-
-
-/* 
-@media screen and (max-width:1080px){
-main, header {width: 100%;}
-header {height: 5%;}
-header a {font-size: 30px;}
-#identity {width: 50%; margin-top: auto; margin-left: auto; margin-right: auto;}
-#index {flex-direction: column-reverse;}
-#right { margin-left: 5%; margin-right: 5%;}
-#quote {text-align: center;}
-#quote h1 {font-size: 200%}
-#quote h2 {font-size: 100%;}
-#quote p {font-size: 80%}
-#drop {display:block; }
-#drop img { display: block; margin-top: 5%; margin-left: auto; margin-right: auto; width: 100%; }
-#drop p {margin-right: 5%; margin-left: 5%;}
-#black-magic img {width: 90%;}
-#black-magic p {text-align: left; margin-left: 5%; margin-right: 5%;}
-#boys {width: 100%; margin-top: 2%;}
-#vaults {width: 80%;}
-#boys p {width: 90%; margin-left: 5%; margin-right: 5%;}
-#creative-space p {margin-left: 5%; margin-right: 5%;}
-#art1 {width: 80%; margin-left: 10%; margin-right: 10%;}
-#art2 {width: 80%; height: 80%; margin-left: 10%; margin-right: 10%;}
-#cube {display: block; margin-top: 3%; margin-bottom: 10%;}
-#cubeimg {width: 90%; height: auto; margin-left: auto; margin-right: auto; margin-bottom: 5%;}
-#cube-txt {margin-left: 5%; margin-right: 5%; padding: 1%;}
-#rose {display: block; margin-top: 1%; margin-bottom: 10%;}
-#penrose {width: 90%; height: auto; margin-left: auto; margin-right: auto; margin-bottom: 0;}
-#penrose-txt {margin-left: 10%; margin-right: 10%; padding: 1%;}
-#home {display: block; margin-left: auto; margin-right: auto; width: 80%;}
-.homeslide {width: 100%; margin-top: 10%; margin-left: auto; margin-right: auto;}
-#fusion {display: block; margin-top: 40%; margin-left: auto; margin-right: auto; width: 80%;}
-.fusionslide {margin-left: auto; margin-right: auto;}
-#expix {width: 80%; margin-left: auto; margin-right: auto;}
-#expix img {width: 100%;}
-#space {width: 80%; flex-direction: column-reverse; margin-left: auto; margin-right: auto;}
-#spaceage { margin-left: auto; margin-right: auto;}
-#space-txt {text-align: center; }
-#contactpage {flex-direction: column; }
-#adress {width: 80%; margin-left: auto; margin-right: auto; margin-top: 10%;}
-#adress img {width: 5%;}
-#contact {width: 80%; margin-top: 10%; margin-left: auto; margin-right: auto;}
-#contactpage {margin-top: 0;}
-textarea {width: 80%;}
-#verzenden {width: 100%; height: 50%; font-size: 300%; margin-bottom: 10%;}
-}
-*/
