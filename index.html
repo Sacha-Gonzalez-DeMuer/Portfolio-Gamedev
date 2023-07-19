@@ -118,7 +118,8 @@
                 }
 
                 #hometxt p {
-                    font-size: 30px
+                    font-size: 30px;
+                    padding:  0 100px 0 100px;
                 }
             }
 
@@ -273,24 +274,10 @@
             @media (max-width: 1468px) {
                 /* Increase font size and padding for the text elements */
                 h1, h2, h3, p {
-                    font-size: 16px;
                     padding: 5px;
                 }
 
 
-                /* Reduce the padding for the skills section on mobile */
-                .skills {
-                    padding: 0;
-                }
-
-                /* Add padding around the text elements to prevent cutting off on small screens */
-                .education h1,
-                .work-experience h1,
-                .skills p,
-                .skills h1 {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
                 .skills h1 {
                     font-size: 70px;
                     margin-bottom: auto;
@@ -326,12 +313,7 @@
 
                 /* Center the contact section on mobile */
                 #contactpage {
-                    text-align: center;
-                }
-
-                /* Reduce the padding for the "Send" button on mobile */
-                #verzenden {
-                    padding: 8px;
+                    text-align: left;
                 }
             }
         </style>
