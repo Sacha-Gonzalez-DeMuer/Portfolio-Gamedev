@@ -9,8 +9,6 @@
 
         <!-- Styles for the "home" section -->
         <style>
-
-
             body {
                 font-family: 'acumin', sans-serif;
                 margin: 0;
@@ -63,13 +61,6 @@
                 color: #ffffff; /* Set the text color to white */
             }
 
-            #hometxt h1,
-            #hometxt p,
-            #hometxt h2,
-            #hometxt h3 {
-                width: 800px;
-                color: #333132;
-            }
 
             #hometxt h2 {
                 font-family: 'quicksand';
@@ -89,6 +80,7 @@
             @media (max-width: 1468px) {
                 /* Remove flex-direction and align-items to stack the elements */
                 .home {
+
                     flex-direction: column;
                     align-items: center;
                 }
@@ -104,10 +96,10 @@
                     margin-bottom: 20px;
                 }
 
-                /* Reduce the size of the profile picture on mobile */
+                /* Adjust the size of the profile picture on mobile */
                 #identity {
                     border: 15px solid #333132;
-                    max-width: 200px; /* Adjust the value to your preference */
+                    max-width: 500px; /* Adjust the value to your preference */
                     height: auto;
                 }
 
@@ -118,14 +110,18 @@
                     padding-left: 20px;
                     padding-right: 20px;
                     width: auto;
+                    color: #333132;
                 }
-                
-                
-            }
-        </style>
 
-        <!-- Styles for the "resume" section -->
-        <style>
+                #hometxt h1 {
+                    font-size: 80px;
+                }
+
+                #hometxt p {
+                    font-size: 30px
+                }
+            }
+
 
             @media (max-width: 1468px) {
                 /* Styles for mobile (iPhone) */
@@ -198,6 +194,7 @@
             }
 
             p {
+                color: black;
                 margin-bottom: 10px;
             }
 
@@ -208,7 +205,6 @@
 
             .work-experience h2 a,
             .education h2 a {
-                color: var(--orange);
                 color: var(--orange);
                 font-size: 16px;
 
@@ -269,12 +265,75 @@
                     padding-left: 10px;
                     padding-right: 10px;
                 }
-                
-                 #work-experience-skills-container {
-                margin-top: 20px;
+
+                #work-experience-skills-container {
+                    margin-top: 20px;
                 }
             }
+            @media (max-width: 1468px) {
+                /* Increase font size and padding for the text elements */
+                h1, h2, h3, p {
+                    font-size: 16px;
+                    padding: 5px;
+                }
 
+
+                /* Reduce the padding for the skills section on mobile */
+                .skills {
+                    padding: 0;
+                }
+
+                /* Add padding around the text elements to prevent cutting off on small screens */
+                .education h1,
+                .work-experience h1,
+                .skills p,
+                .skills h1 {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                .skills h1 {
+                    font-size: 70px;
+                    margin-bottom: auto;
+                }
+                
+                .skills p {
+                    font-size: 40px;
+                    font-family: 'quicksand';
+                }
+
+                /* Center the skills section on mobile */
+                .skills {
+                    text-align: center;
+                }
+
+                /* Add margin between different education entries on mobile */
+                .work-experience h2 + p,
+                .education h2 + p {
+                    margin-top: 10px;
+                }
+
+                /* Adjust the margin and padding for the "Work experience" and "Education" sections */
+                #work-experience,
+                .education {
+                    margin-top: 50px;
+                }
+
+                /* Adjust the margin for the sections container */
+                .sections-container {
+                    margin-right: 0;
+                    margin-top: 20px;
+                }
+
+                /* Center the contact section on mobile */
+                #contactpage {
+                    text-align: center;
+                }
+
+                /* Reduce the padding for the "Send" button on mobile */
+                #verzenden {
+                    padding: 8px;
+                }
+            }
         </style>
     </head>
 
@@ -286,6 +345,7 @@
                         <ul class="navbar-buttons">
                             <li class="active"><a href="index.html">Home</a></li>
                             <li><a href="C++.html">C++</a></li>
+
                             <li><a href="unity.html">Unity</a></li>
                             <li><a href="unrealengine.html">Unreal Engine</a></li>
                             <li><a href="extras.html">Extras</a></li>
@@ -321,7 +381,6 @@
 
                 <!-- Skills section -->
                 <div class="skills">
-                    <p>> Skills</p>
                     <h1>Programming Languages</h1>
                     <p>C++</p>
                     <p>C#</p>
