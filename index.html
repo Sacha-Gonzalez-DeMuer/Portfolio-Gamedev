@@ -9,6 +9,8 @@
 
         <!-- Styles for the "home" section -->
         <style>
+
+
             body {
                 font-family: 'acumin', sans-serif;
                 margin: 0;
@@ -36,7 +38,12 @@
                 align-items: center;
                 justify-content: center;
                 flex-grow: 1;
+                font-family: 'acumin', sans-serif;
+                font-weight: normal;
+                min-height: 100vh;
+                background-color: #F1F1F2;
             }
+
 
             #identity {
                 border: 15px solid #333132;
@@ -79,12 +86,69 @@
             #hometxt {
                 margin-left: 100px;
             }
+            @media (max-width: 1468px) {
+                /* Remove flex-direction and align-items to stack the elements */
+                .home {
+                    flex-direction: column;
+                    align-items: center;
+                }
 
+                #hometxt {
+                    text-align: center;
+                    margin-left: 0; /* Center the text */
+                }
+
+                /* Center the profile picture on mobile */
+                .profile-pic {
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+
+                /* Reduce the size of the profile picture on mobile */
+                #identity {
+                    border: 15px solid #333132;
+                    max-width: 200px; /* Adjust the value to your preference */
+                    height: auto;
+                }
+
+                #hometxt h1,
+                #hometxt p,
+                #hometxt h2,
+                #hometxt h3 {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    width: auto;
+                }
+                
+                
+            }
         </style>
 
         <!-- Styles for the "resume" section -->
         <style>
+
+            @media (max-width: 1468px) {
+                /* Styles for mobile (iPhone) */
+                main {
+                    margin-top: 20px;
+                }
+
+                #work-experience-skills-container {
+                    flex-direction: column;
+                }
+
+                .skills {
+                    padding-left: 0;
+                }
+
+                .work-experience h2,
+                .education h2 {
+                    margin-top: 0;
+                }
+            }
+
             #work-experience-skills-container {
+                margin-top: 150px;
                 display: flex;
                 justify-content: space-between;
             }
@@ -124,13 +188,12 @@
                 flex-direction: column;
                 margin-right: 20px; /* Add margin between the sections */
                 margin-top: -20px; /* Remove the little white space at the top */
+                max-width: 75vw; /* Adjust the max width as needed */
             }
-
             /* Move the skills section to the right */
             .skills {
                 flex: 1;
-
-                padding-left: 250px; /* Add padding to separate from the experience section */
+                padding-right: 250px; /* Add padding to separate from the experience section */
                 padding-bottom: 100px;
             }
 
@@ -172,6 +235,45 @@
                 margin: 5px 0;
             }
 
+            /* Styles for mobile (iPhone) */
+            @media (max-width: 1468px) {
+                main {
+                    margin-top: 20px;
+                }
+
+                #work-experience-skills-container {
+                    flex-direction: column;
+                }
+
+                .skills {
+                    text-align: center; /* Center the skills section */
+                    padding-right: 0;
+                    padding-left: 0; /* Remove unnecessary padding */
+                }
+
+                .work-experience h2,
+                .education h2 {
+                    margin-top: 0;
+                }
+
+                /* Additional styles for mobile layout */
+                #contactpage {
+                    padding-left: 20px;
+                }
+
+                /* Add padding around the text elements to prevent cutting off on small screens */
+                .education h1,
+                .work-experience h1,
+                .skills p,
+                .skills h1 {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                
+                 #work-experience-skills-container {
+                margin-top: 20px;
+                }
+            }
 
         </style>
     </head>
@@ -197,7 +299,9 @@
         <!-- Home section -->
         <main class="content-wrapper">
             <div class="home">
-                <img id="identity" src="images/pfp.png" alt="">
+                <div class="profile-pic">
+                    <img id="identity" src="images/pfp.png" alt="">
+                </div>
                 <div id="hometxt">
                     <h1>> Hi, I'm sacha</h1>
                     <p>
@@ -213,63 +317,7 @@
                     <h1><b>///////////////////</b></h1>
                 </div>
             </div>
-        </main>
-
-        <!-- Resume section -->
-        <main class="content-wrapper">
             <div id="work-experience-skills-container">
-                <div id="work-experience">
-                    <div class="work-experience">
-                        <h1>Work experience</h1>
-                        <p>2021</p>
-                        <h2>Unity Gameplay Programmer <a target="_blank" href="https://www.frostyfroggs.com">@Frosty Froggs</a></h2>
-                        <p>I built the UI and tutorial level for <a target="_blank" href="https://www.frostyfroggs.com/portfolio/tiger-run-3d/">Tiger Run</a> and got the opportunity to develop the prototype for  <a target="_blank" href="unity.html#piece-buddyjumping">Buddy Jumping.</a></p>
-                    </div>
-                    <div class="education">
-                        <h1>Education</h1>
-                        <p>2021 - Present</p>
-                        <h2>Major Game Development  <a target="_blank" href="https://www.digitalartsandentertainment.be/page/31/Game+Development">@Howest Digital Arts and Entertainment</a></h2>
-                        <p>During my enrollment at Howest Digital Arts and Entertainment (DAE), I have immersed myself in a comprehensive curriculum that emphasizes technical expertise and creative exploration. The coursework has provided me with an in-depth understanding of programming and various aspects of game development. Through hands-on projects and challenges, DAE has honed my abilities, allowing me to grasp complex concepts and become a proficient developer. Moreover, the program has instilled in me the value of professionalism and effective teamwork.</p>
-
-                        <br>
-                        <p>2017 - 2021</p>
-                        <h2>Major 3D Developer in Multimedia & Communication Technology <br><a target="_blank" href="https://www.frostyfroggs.com">@KdG University of Applied Sciences</a></h2> <p>The program covered diverse areas such as game & web development, AI, audio & video editing, VFX, 3D modeling, and animation. During the last two years, I focused on game development using Unity, collaborating with individuals of varied skillsets.</p>
-
-                    </div>
-
-                    <div id="contactpage">
-
-                        <div id="adress">
-                            <h1>CONTACT</h1>
-                            
-                        </div>
-                        <div>
-                            <div id="contact">
-                                <form method="post" action="mailto:gonzalezdemuer.sacha@hotmail.com">
-                                    <label class="comment">
-                                        <p>Your e-mail</p>
-                                        <input type="email" name="email" required>
-                                    </label>
-                                    <label class="vraag">
-                                        <p>Please provide your message or inquiry:</p>
-                                        <textarea name="message" required></textarea>
-                                    </label>
-
-                                    <br>
-                                    <br>
-
-                                    <input id="verzenden" type="submit" value="SEND">
-                                </form>
-                            </div>
-                        </div>
-                        
-                            <div id="socials">
-                             <p>Or send me a message on my socials!</p>
-                            <a href="https://www.linkedin.com/in/sacha-gonzalez-de-muer-8a71901a8">LinkedIn</a>
-                            <a href="https://instagram.com/sachagdm">Instagram</a>
-                            </div>
-                    </div>
-                </div>
 
                 <!-- Skills section -->
                 <div class="skills">
@@ -314,9 +362,62 @@
                     <p>French (Native)</p>
                     <p>Spanish (Native)</p>
                 </div>
+
+                <div id="work-experience">
+                    <div class="work-experience">
+                        <h1>Work experience</h1>
+                        <p>2021</p>
+                        <h2>Unity Gameplay Programmer <a target="_blank" href="https://www.frostyfroggs.com">@Frosty Froggs</a></h2>
+                        <p>I built the UI and tutorial level for <a target="_blank" href="https://www.frostyfroggs.com/portfolio/tiger-run-3d/">Tiger Run</a> and got the opportunity to develop the prototype for  <a target="_blank" href="unity.html#piece-buddyjumping">Buddy Jumping.</a></p>
+                    </div>
+                    <div class="education">
+                        <h1>Education</h1>
+                        <p>2021 - Present</p>
+                        <h2>Major Game Development  <a target="_blank" href="https://www.digitalartsandentertainment.be/page/31/Game+Development">@Howest Digital Arts and Entertainment</a></h2>
+                        <p>During my enrollment at Howest Digital Arts and Entertainment (DAE), I have immersed myself in a comprehensive curriculum that emphasizes technical expertise and creative exploration. The coursework has provided me with an in-depth understanding of programming and various aspects of game development. Through hands-on projects and challenges, DAE has honed my abilities, allowing me to grasp complex concepts and become a proficient developer. Moreover, the program has instilled in me the value of professionalism and effective teamwork.</p>
+
+                        <br>
+                        <p>2017 - 2021</p>
+                        <h2>Major 3D Developer in Multimedia & Communication Technology <br><a target="_blank" href="https://www.frostyfroggs.com">@KdG University of Applied Sciences</a></h2> <p>The program covered diverse areas such as game & web development, AI, audio & video editing, VFX, 3D modeling, and animation. During the last two years, I focused on game development using Unity, collaborating with individuals of varied skillsets.</p>
+
+                    </div>
+                    <br><br><br>
+                    <h1><b>///////////////////</b></h1>
+
+
+                    <div id="contactpage">
+                        <div id="adress">
+                            <h1>CONTACT</h1>
+
+                        </div>
+                        <div>
+                            <div id="contact">
+                                <form method="post" action="mailto:gonzalezdemuer.sacha@hotmail.com">
+                                    <label class="comment">
+                                        <p>Your e-mail</p>
+                                        <input type="email" name="email" required>
+                                    </label>
+                                    <label class="vraag">
+                                        <p>Please provide your message or inquiry:</p>
+                                        <textarea name="message" required></textarea>
+                                    </label>
+
+                                    <br>
+                                    <br>
+
+                                    <input id="verzenden" type="submit" value="SEND">
+                                </form>
+                            </div>
+                        </div>
+
+                        <div id="socials">
+                            <p>Or send me a message on my socials!</p>
+                            <a href="https://www.linkedin.com/in/sacha-gonzalez-de-muer-8a71901a8">LinkedIn</a>
+                            <a href="https://instagram.com/sachagdm">Instagram</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
         </main>
     </body>
 

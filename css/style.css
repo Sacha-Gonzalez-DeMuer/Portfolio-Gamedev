@@ -185,7 +185,6 @@ h2 a {
 }
 
 
-#contactpage {  margin-top: 120px;}
 
 #adress img {width: 2%}
 #socials a { 
@@ -398,6 +397,22 @@ background-color: #FCAB95;
 .navbar-download-button:hover {
     background-color: var(--orange);
     color: white;
+}
+
+@media (max-width: 1468px) {
+    
+    .navbar-buttons {
+    margin-right: 10vw; /* Add desired distance between buttons */
+}
+    
+    .navbar-buttons li {
+        margin-right: 10px;
+    }
+
+    .navbar-download-button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
 }
 
 .slideshow-content .slide {
