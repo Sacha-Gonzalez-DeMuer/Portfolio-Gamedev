@@ -1,116 +1,323 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
 
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" type="image/png" href="images/illustraties/vault-boys/vault%20me.png" />
+    <head>
+        <meta charset="UTF-8">
+        <title>Sacha Gonzalez De Muer | Portfolio</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="images/illustraties/vault-boys/vault%20me.png" />
 
-  <style>
-    body {
-      font-family: 'acumin', sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      background-color: #F1F1F2;
-    }
+        <!-- Styles for the "home" section -->
+        <style>
+            body {
+                font-family: 'acumin', sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                background-color: #F1F1F2;
+            }
 
-    /* Center the content horizontally and vertically */
-    .content-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      flex-grow: 1;
-    }
+            body {
+                font-family: 'acumin', sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                background-color: #F1F1F2;
+            }
 
-    #identity {
-      border: 15px solid #333132;
-      width: 306px;
-      height: 386px;
-    }
+            /* Center the content horizontally and vertically */
+            .content-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-grow: 1;
+            }
 
-    .home {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 50px;
-      color: #ffffff;
-    }
- #hometxt {
-      margin-left: 20px;
-      color: #ffffff; /* Set the text color to white */
-    }
-      
-    #hometxt h1,
-    #hometxt p,
-    #hometxt h2,
-    #hometxt h3 {
-        width: 500px;
-      color: #333132;
-    }
-      
-      #hometxt h2 {
-          font-family: 'quicksand';
-          font-style: italic;
-          font-size: 16px;
-      }
-      
-      #hometxt h3 {
-            font-family: 'quicksand';
-            font-style: italic;
-          font-size: 14px;
-          margin-top: -10px;
-    }
-    #hometxt {
-      margin-left: 20px;
-    }
-  </style>
-</head>
+            #identity {
+                border: 15px solid #333132;
+                width: 428x;
+                height: 540px;
+            }
 
-<body>
-  <div class="wrapper zwart">
-    <header>
-      <div class="navbar-group">
-        <nav>
-          <ul class="navbar-buttons">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="C++.html">C++</a></li>
-            <li><a href="unity.html">Unity</a></li>
-            <li><a href="unrealengine.html">Unreal Engine</a></li>
-            <li><a href="extras.html">Extras</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <a href="#" class="navbar-download-button">DOWNLOAD CV</a>
-    </header>
-  </div>
+            .home {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 50px;
+                color: #ffffff;
+            }
+            #hometxt {
+                margin-left: 20px;
+                color: #ffffff; /* Set the text color to white */
+            }
 
-  <main class="content-wrapper">
-    <div class="home">
-      <img id="identity" src="images/pfp.png" alt="">
-      <div id="hometxt">
-        <h1>Hi, I'm sacha</h1>
-        <p>
-          I'm a dedicated and versatile game developer with a wide range of skills and interests. <br> My passion lies in
-          creating engaging gameplay experiences, but I'm equally thrilled about graphics, engine programming, animation,
-          and design.
-          <br><br> From a young age, I've been deeply involved with digital media, and I'm constantly eager to learn new
-          things and challenge myself.
-          <br><br> Overall, I'm determined to excel in the game development industry and keep evolving with each new
-          endeavor.
-        </p>
+            #hometxt h1,
+            #hometxt p,
+            #hometxt h2,
+            #hometxt h3 {
+                width: 800px;
+                color: #333132;
+            }
 
-        <h2>To Inifnity and Beyond</h2>
-        <h3>-Mom</h3>
-      </div>
-    </div>
-  </main>
-</body>
+            #hometxt h2 {
+                font-family: 'quicksand';
+                font-style: italic;
+                font-size: 26px;
+            }
+
+            #hometxt h3 {
+                font-family: 'quicksand';
+                font-style: italic;
+                font-size: 14px;
+                margin-top: -10px;
+            }
+            #hometxt {
+                margin-left: 100px;
+            }
+
+        </style>
+
+        <!-- Styles for the "resume" section -->
+        <style>
+            #work-experience-skills-container {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            /* Adjust the width of the work experience and education sections */
+            #work-experience,
+            .education {
+                flex-basis: 80%; /* Adjust the width as needed */
+            }
+            body {
+                font-family: 'acumin', sans-serif;
+                font-weight: bold;
+                font-style: normal;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                background-color: #F1F1F2;
+            }
+
+            main {
+                font-family: 'acumin', sans-serif;
+                font-weight: normal;
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start; /* Align items to the top */
+                margin-top: 120px;
+                max-width: 75vw;
+                padding-right: 20px; /* Add padding to the right for the skills section */
+                overflow-x: hidden; /* Hide horizontal scrollbar */
+            }
+
+            /* Container for work experience and skills sections */
+            .sections-container {
+                display: flex;
+                flex-direction: column;
+                margin-right: 20px; /* Add margin between the sections */
+                margin-top: -20px; /* Remove the little white space at the top */
+            }
+
+            /* Move the skills section to the right */
+            .skills {
+                flex: 1;
+
+                padding-left: 250px; /* Add padding to separate from the experience section */
+                padding-bottom: 100px;
+            }
+
+            p {
+                margin-bottom: 10px;
+            }
+
+
+            .education {
+                margin-top: 70px;
+            }
+
+            .work-experience h2 a,
+            .education h2 a {
+                color: var(--orange);
+                color: var(--orange);
+                font-size: 16px;
+
+            }
+
+            /* Add margin to separate the year and the course name in the education section */
+            .work-experience h2,
+            .education h2 {
+                margin-top: -10px;
+                margin-bottom: 5px;
+            }
+
+            /* Add margin between different education entries */
+            .work-experience h2 + p,
+            .education h2 + p {
+                margin-top: 5px;
+            }
+            .skills h1 {
+                margin-top: 10px;
+            }
+
+            .skills p {
+                font-family: 'acumin', sans-serif;
+                margin: 5px 0;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div class="wrapper zwart">
+            <header>
+                <div class="navbar-group">
+                    <nav>
+                        <ul class="navbar-buttons">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="C++.html">C++</a></li>
+                            <li><a href="unity.html">Unity</a></li>
+                            <li><a href="unrealengine.html">Unreal Engine</a></li>
+                            <li><a href="extras.html">Extras</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="#" class="navbar-download-button">DOWNLOAD CV</a>
+            </header>
+        </div>
+
+        <!-- Home section -->
+        <main class="content-wrapper">
+            <div class="home">
+                <img id="identity" src="images/pfp.png" alt="">
+                <div id="hometxt">
+                    <h1>> Hi, I'm sacha</h1>
+                    <p>
+                        I'm a dedicated and versatile game developer with a wide range of skills and interests. <br> My passion lies in
+                        creating engaging gameplay experiences, but I'm equally thrilled about graphics, engine programming, animation,
+                        and design.
+                        <br><br> From a young age, I've been deeply involved with digital media, and I'm constantly eager to learn new
+                        things and challenge myself.
+                        <br><br> Overall, I'm determined to excel in the game development industry and keep evolving with each new
+                        endeavor.
+                    </p>
+
+                    <h1><b>///////////////////</b></h1>
+                </div>
+            </div>
+        </main>
+
+        <!-- Resume section -->
+        <main class="content-wrapper">
+            <div id="work-experience-skills-container">
+                <div id="work-experience">
+                    <div class="work-experience">
+                        <h1>Work experience</h1>
+                        <p>2021</p>
+                        <h2>Unity Gameplay Programmer <a target="_blank" href="https://www.frostyfroggs.com">@Frosty Froggs</a></h2>
+                        <p>I built the UI and tutorial level for <a target="_blank" href="https://www.frostyfroggs.com/portfolio/tiger-run-3d/">Tiger Run</a> and got the opportunity to develop the prototype for  <a target="_blank" href="unity.html#piece-buddyjumping">Buddy Jumping.</a></p>
+                    </div>
+                    <div class="education">
+                        <h1>Education</h1>
+                        <p>2021 - Present</p>
+                        <h2>Major Game Development  <a target="_blank" href="https://www.digitalartsandentertainment.be/page/31/Game+Development">@Howest Digital Arts and Entertainment</a></h2>
+                        <p>During my enrollment at Howest Digital Arts and Entertainment (DAE), I have immersed myself in a comprehensive curriculum that emphasizes technical expertise and creative exploration. The coursework has provided me with an in-depth understanding of programming and various aspects of game development. Through hands-on projects and challenges, DAE has honed my abilities, allowing me to grasp complex concepts and become a proficient developer. Moreover, the program has instilled in me the value of professionalism and effective teamwork.</p>
+
+                        <br>
+                        <p>2017 - 2021</p>
+                        <h2>Major 3D Developer in Multimedia & Communication Technology <br><a target="_blank" href="https://www.frostyfroggs.com">@KdG University of Applied Sciences</a></h2> <p>The program covered diverse areas such as game & web development, AI, audio & video editing, VFX, 3D modeling, and animation. During the last two years, I focused on game development using Unity, collaborating with individuals of varied skillsets.</p>
+
+                    </div>
+
+                    <div id="contactpage">
+
+                        <div id="adress">
+                            <h1>CONTACT</h1>
+                            
+                        </div>
+                        <div>
+                            <div id="contact">
+                                <form method="post" action="mailto:gonzalezdemuer.sacha@hotmail.com">
+                                    <label class="comment">
+                                        <p>Your e-mail</p>
+                                        <input type="email" name="email" required>
+                                    </label>
+                                    <label class="vraag">
+                                        <p>Please provide your message or inquiry:</p>
+                                        <textarea name="message" required></textarea>
+                                    </label>
+
+                                    <br>
+                                    <br>
+
+                                    <input id="verzenden" type="submit" value="SEND">
+                                </form>
+                            </div>
+                        </div>
+                        
+                            <div id="socials">
+                             <p>Or send me a message on my socials!</p>
+                            <a href="https://www.linkedin.com/in/sacha-gonzalez-de-muer-8a71901a8">LinkedIn</a>
+                            <a href="https://instagram.com/sachagdm">Instagram</a>
+                            </div>
+                    </div>
+                </div>
+
+                <!-- Skills section -->
+                <div class="skills">
+                    <p>> Skills</p>
+                    <h1>Programming Languages</h1>
+                    <p>C++</p>
+                    <p>C#</p>
+                    <p>HLSL</p>
+                    <p>XAML</p>
+                    <p>HTML</p>
+                    <p>CSS</p>
+
+                    <h1>Software Packages</h1>
+                    <p>Visual Studio</p>
+                    <p>GitHub</p>
+                    <p>Perforce Helix Core</p>
+                    <p>Unity Engine</p>
+                    <p>Unreal Engine 4 & 5</p>
+                    <p>Autodesk Maya</p>
+                    <p>Blender</p>
+                    <p>Houdini</p>
+                    <p>Cinema 4D</p>
+                    <p>Adobe Photoshop</p>
+                    <p>Adobe Illustrator</p>
+                    <p>Adobe Indesign</p>
+                    <p>Adobe After Effects</p>
+                    <p>Adobe Premiere Pro</p>
+
+                    <h1>API's</h1>
+                    <p>SDL</p>
+                    <p>OpenGL</p>
+                    <p>DirectX11</p>
+                    <p>PhysX</p>
+
+                    <h1>Frameworks</h1>
+                    <p>JUCE</p>
+                    <p>WPF</p>
+
+                    <h1>Languages</h1>
+                    <p>English (Proficient)</p>
+                    <p>Dutch (Native)</p>
+                    <p>French (Native)</p>
+                    <p>Spanish (Native)</p>
+                </div>
+            </div>
+
+
+        </main>
+    </body>
 
 </html>
