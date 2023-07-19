@@ -68,8 +68,7 @@ p {
 .zwart {
     background-color: #333132
 }
-
-header, main, footer {
+main, footer {
     width: 75vw;
     margin: 0px;
 }
@@ -147,19 +146,8 @@ h2 a {
     position: relative;
 }
 
-#identity {
-    position: absolute;
-    top: 50%; /* Vertically center the image */
-    transform: translateY(-50%); /* Adjust vertical positioning */
-    margin-right: 20px; /* Add some space between the image and text */
-}
 
-#hometxt {
-    display: flex; /* Display the content as a flex container */
-    flex-direction: column; /* Stack the text vertically */
-    align-items: flex-start; /* Align the text to the left */
-    margin-left: 400px; /* Adjust the distance from the image */
-}
+
 
 #right p { 
     font-size: 20px;
@@ -197,7 +185,7 @@ h2 a {
 }
 
 
-#contactpage {display: flex; margin-top: 200px;;}
+#contactpage {  margin-top: 100px;}
 
 #adress img {width: 2%}
 #adress a { 
@@ -393,7 +381,7 @@ background-color: #FCAB95;
     display: flex;
     list-style: none;
     padding: 0;
-    margin-right: 50vw; /* Add desired distance between buttons */
+    margin-right: 30vw; /* Add desired distance between buttons */
 }
 
 .navbar-download-button {
@@ -470,9 +458,4 @@ background-color: #FCAB95;
         background-color: var(--orange);
     }
 </style>
-
-<div class="link-buttons">
-    <a href="https://github.com/your-github-repo" class="button" id="git-link-btn">GitHub</a>
-    <a href="/path-to-download" class="button" id="download-demo-btn">Download Demo</a>
-</div>
 

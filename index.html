@@ -1,48 +1,116 @@
 <!doctype html>
 <html lang="nl">
-    <head>
-        <meta charset="UTF-8">
-        <title>Sacha Gonzalez De Muer</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="images/illustraties/vault-boys/vault%20me.png"/>
 
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/png" href="images/illustraties/vault-boys/vault%20me.png" />
 
-    <body>
-        <div class="wrapper zwart">
-            <header>
-                <div class="navbar-group">
-                    <nav>
-                        <ul class="navbar-buttons">
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li><a href="C++.html">C++</a></li>
-                            <li><a href="unity.html">Unity</a></li>
-                            <li><a href="unrealengine.html">Unreal Engine</a></li>
-                            <li><a href="extras.html">Extras</a></li>
-                            <li><a href="resume.html">Resume</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <a href="#" class="navbar-download-button">DOWNLOAD CV</a>
-            </header>
-        </div>
+  <style>
+    body {
+      font-family: 'acumin', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #F1F1F2;
+    }
 
-        <main>
-            <img id="identity" src="images/identity_poster_cropped.png" alt="">
-            <div id="hometxt">
-                <div id="quote">
-                    <h1>Sacha Gonzalez De Muer</h1>
-                    <p>// Game development portfolio</p>
-                </div>
-                <h1>BIO</h1>
-                <p>Hi, and welcome to my game development portfolio!
-                    [ENTER PORTFOLIO TEXT HERE]
-                </p>
+    /* Center the content horizontally and vertically */
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+    }
 
-                <h2>To Inifnity and Beyond</h2>
-                <h3>-Mom</h3>
-            </div>
-        </main> 
-    </body>
+    #identity {
+      border: 15px solid #333132;
+      width: 306px;
+      height: 386px;
+    }
+
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+      color: #ffffff;
+    }
+ #hometxt {
+      margin-left: 20px;
+      color: #ffffff; /* Set the text color to white */
+    }
+      
+    #hometxt h1,
+    #hometxt p,
+    #hometxt h2,
+    #hometxt h3 {
+        width: 500px;
+      color: #333132;
+    }
+      
+      #hometxt h2 {
+          font-family: 'quicksand';
+          font-style: italic;
+          font-size: 16px;
+      }
+      
+      #hometxt h3 {
+            font-family: 'quicksand';
+            font-style: italic;
+          font-size: 14px;
+          margin-top: -10px;
+    }
+    #hometxt {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper zwart">
+    <header>
+      <div class="navbar-group">
+        <nav>
+          <ul class="navbar-buttons">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="C++.html">C++</a></li>
+            <li><a href="unity.html">Unity</a></li>
+            <li><a href="unrealengine.html">Unreal Engine</a></li>
+            <li><a href="extras.html">Extras</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <a href="#" class="navbar-download-button">DOWNLOAD CV</a>
+    </header>
+  </div>
+
+  <main class="content-wrapper">
+    <div class="home">
+      <img id="identity" src="images/pfp.png" alt="">
+      <div id="hometxt">
+        <h1>Hi, I'm sacha</h1>
+        <p>
+          I'm a dedicated and versatile game developer with a wide range of skills and interests. <br> My passion lies in
+          creating engaging gameplay experiences, but I'm equally thrilled about graphics, engine programming, animation,
+          and design.
+          <br><br> From a young age, I've been deeply involved with digital media, and I'm constantly eager to learn new
+          things and challenge myself.
+          <br><br> Overall, I'm determined to excel in the game development industry and keep evolving with each new
+          endeavor.
+        </p>
+
+        <h2>To Inifnity and Beyond</h2>
+        <h3>-Mom</h3>
+      </div>
+    </div>
+  </main>
+</body>
+
 </html>
