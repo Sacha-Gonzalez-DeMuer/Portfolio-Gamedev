@@ -479,7 +479,9 @@ textarea {
 .git-link-btn {
     background-color: #6469B0;
 }
-
+.page-link-btn {
+    background-color: var(--orange);
+}
 .download-demo-btn {
     background-color: var(--orange);
 }
