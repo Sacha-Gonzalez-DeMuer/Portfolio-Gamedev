@@ -201,7 +201,7 @@
 
 
             .education {
-                margin-top: 70px;
+                margin-top: 50px;
             }
 
             .work-experience h2 a,
@@ -218,6 +218,9 @@
                 margin-bottom: 5px;
             }
 
+            .projects-container {
+                margin-top: 50px;
+            }
             /* Add margin between different education entries */
             .work-experience h2 + p,
             .education h2 + p {
@@ -330,12 +333,18 @@
                 }
             }
 
-            .footer-buttons li a {
-                color: #ffffff;
-                text-decoration: none;
-                font-size: 18px;
-                font-weight: bold;
-            }
+            
+            #work-experience p a {
+            font-family: Arial, sans-serif; /* Change to your preferred font family */
+            font-size: 16px; /* Change to your preferred font size */
+            color: var(--orange); /* Change to your preferred color (here, using blue as an example) */
+            text-decoration: none; /* Remove underline from the linked text */
+        }
+
+        /* Optional: Style the linked text when hovered */
+        #work-experience a:hover {
+            color:  #007bff; /* Change to your preferred color when hovered (here, using orange as an example) */
+        }
         </style>
     </head>
 
@@ -430,7 +439,7 @@
                         <h1>> Work experience</h1>
                         <p>2021</p>
                         <h2>Unity Gameplay Programmer <a target="_blank" href="https://www.frostyfroggs.com">@Frosty Froggs</a></h2>
-                        <p>I built the UI and tutorial level for <a target="_blank" href="https://www.frostyfroggs.com/portfolio/tiger-run-3d/">Tiger Run</a> and got the opportunity to develop the prototype for  <a target="_blank" href="unity.html#piece-buddyjumping">Buddy Jumping.</a></p>
+                        <p>I built the UI and tutorial level for <a target='_blank' href='https://www.frostyfroggs.com/portfolio/tiger-run-3d/'>Tiger Run</a> and contributed to its development by incorporating new features and debugging existing ones. Additionally, I developed the prototype for <a target='_blank' href='unity.html#piece-buddyjumping'>Buddy Jumping.</a></p>
                     </div>
                     <div class="education">
                         <h1>> Education</h1>
