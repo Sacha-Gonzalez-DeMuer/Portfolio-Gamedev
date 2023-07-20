@@ -160,39 +160,22 @@ h2 a {
     font-weight: bold;
     margin-right: 20px; }
 
-.vraag textarea {
-    height: 10em;
-}
-
-#verzenden {width: 50%; height: 50px; background-color: #ed1651; color: white;}
+background-color: #ed1651; color: white;}
 
 #slideshow-container {
     width: 100%;
-    height: 50vh;
+    height: 100%;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
     margin: 0 auto; /* Center the slideshow container */
 }
 .piece-container {
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: flex-start; /* Align the content at the top */
-    text-align: left; /* Align the text to the left of the slideshow */
-    width: 100%;
-    height: 100%;
-}
-
-
-.piece-container {
     display: inline-block;
     width: 90vw;
     vertical-align: top;
-    overflow: hidden;
-}
-
-.piece-container::-webkit-scrollbar {
-    display: none; 
+    overflow-y: auto; /* Allows vertical scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling within each piece-container */
 }
 
 .embed-responsive {
@@ -221,7 +204,7 @@ h2 a {
 
 #piece-txt {
     padding-left: 20px;
-    overflow: auto;
+    overflow: visible;
     max-width: 40vw;
     white-space: normal;
 }
@@ -456,6 +439,10 @@ h2 a {
     margin: 0 auto;
 }
 
+
+
+
+
 @media screen and (max-width: 1024px) and (orientation: portrait) {
     body {
         overflow: auto;
@@ -504,8 +491,7 @@ h2 a {
     }
 
     .piece-title h1 {
-        font-size: 60px;
-        justify-content: center;
+        font-size: 70px;
         text-align: center;
     }
 
@@ -518,6 +504,7 @@ h2 a {
     }
 
     .piece-container {
+        height: 90%;
         min-width: 100%;
         flex: 0 0 100%;
         scroll-snap-align: start;
@@ -525,10 +512,12 @@ h2 a {
 
     #piece-txt {
         text-align: center;
+        overflow: hidden;
         padding: 20px;
         margin-top: 0; /* Reset the margin top */
         margin-bottom: 0; /* Reset the margin bottom */
         max-width: none;
+        max-height: none;
     }
 
     #piece-txt h2 {
@@ -576,12 +565,16 @@ h2 a {
         padding: 20px 20px;
     }
 
-    main {
-        padding-bottom: 120px; /* Add space for the overview at the bottom */
-    }
     .link-buttons {
         text-align: center;
     }
+    .tags {
+        font-size: 
+    }
+    #slideshow-container {
+        height: 90vh;
+    }
+    
 }
 </style>
 

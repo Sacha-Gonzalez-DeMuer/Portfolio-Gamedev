@@ -132,11 +132,14 @@
             <div class="piece-container">
                 <div class="piece-title">
 
-                    <h1>&gt; Monte Carlo Search Tree</h1>
+                    <h1>&gt; Monte Carlo<br> Search Tree</h1>
                 </div>
                 <div class="piece" id="mcts">
                     <div class="slideshow-box">
-                        <img src="images/gif/mcts.gif" alt="GP Research GIF"> 
+                        <div class="slideshow" id="noarrow">
+
+                            <img src="images/gif/mcts.gif" alt="GP Research GIF"> 
+                        </div>
                         <div class="link-buttons">
                             <a href="https://github.com/Sacha-Gonzalez-DeMuer/GPP_Exam_ZombieGame" class="button git-link-btn">GitHub</a>
                             <a href="files/demos/" class="button download-demo-btn">Download Demo</a>
@@ -147,6 +150,7 @@
                         <p>
                             Embarking on a research project as part of the Gameplay Programming course at HowestDAE, I sought to unlock the mysteries of player AI engines. While chess engines fascinate me, I decided to take a different approach and explore the implementation of the Monte Carlo Tree Search (MCTS) algorithm for the game of Connect 4. I investigated strategies for optimizing and improving the model and learned a great deal about the intricacies of adaptive search algorithms and decision-making processes in game-playing AI.
                         </p>
+
                         <div class="tags">
                             <span class="tag tag-cpp">C++</span>
                         </div>
@@ -160,7 +164,9 @@
                 </div>
                 <div class="piece" id="mk2d">
                     <div class="slideshow-box">
-                        <img  src="images/logos/mk2d-banner-01.png" alt="GP Research GIF"> 
+                        <div class="slideshow" id="noarrow">
+                            <img  src="images/logos/mk2d-banner-01.png" alt="GP Research GIF"> 
+                        </div>
                         <div class="link-buttons">
                             <a href="https://github.com/Sacha-Gonzalez-DeMuer/GPP_MonteCarloSearchTree" target="_blank" class="button git-link-btn">GitHub</a>
                         </div>
@@ -174,6 +180,18 @@
                             <br><br>
                             More information on relevant design decisions can be found on the <a href="https://github.com/Sacha-Gonzalez-DeMuer/MK2D-Engine">Git ReadMe</a> page.
                         </p>
+
+
+                        <h3>
+                            • Component System
+                            • Scene Graph<br>
+                            • Delegates<br>
+                            • Commands<br>
+                            • Input system with controller support<br>
+                            • Component System<br>
+                            • Sound service locator<br>
+                        </h3>
+
                         <div class="tags">
                             <span class="tag tag-cpp">C++</span>
                         </div>
@@ -254,57 +272,59 @@
             });
 
             // Slideshow functionality
-            const slideshows = Array.from(document.getElementsByClassName("slideshow"));
+    const slideshows = Array.from(document.querySelectorAll(".slideshow"));
 
-            slideshows.forEach((slideshow) => {
-                const slides = Array.from(slideshow.children);
+    slideshows.forEach((slideshow) => {
+        const slides = Array.from(slideshow.children);
 
-                let currentSlideIndex = 0;
+        let currentSlideIndex = 0;
 
-                function showSlide(index) {
-                    slides.forEach((slide) => {
-                        slide.style.display = "none";
-                    });
-
-                    slides[index].style.display = "block";
-                }
-
-
-                function nextSlide() {
-                    currentSlideIndex++;
-                    if (currentSlideIndex >= slides.length -2) {
-                        currentSlideIndex = 0;
-                    }
-                    showSlide(currentSlideIndex);
-                }
-
-                function previousSlide() {
-                    currentSlideIndex--;
-                    if (currentSlideIndex < 2) {
-                        currentSlideIndex = slides.length - 1;
-                    }
-                    showSlide(currentSlideIndex);
-                }
-
-                setInterval(nextSlide, 9000); // Automatically switch to the next slide every 3 seconds
-
-                // Add event listeners for previous and next buttons
-                const slideshowPrevBtn = document.createElement("button");
-                slideshowPrevBtn.innerText = "<";
-                slideshowPrevBtn.classList.add("slideshow-prev-btn");
-                slideshowPrevBtn.addEventListener("click", previousSlide);
-
-                const slideshowNextBtn = document.createElement("button");
-                slideshowNextBtn.innerText = ">";
-                slideshowNextBtn.classList.add("slideshow-next-btn");
-                slideshowNextBtn.addEventListener("click", nextSlide);
-
-                slideshow.appendChild(slideshowPrevBtn);
-                slideshow.appendChild(slideshowNextBtn);
-
-                showSlide(currentSlideIndex);
+        function showSlide(index) {
+            slides.forEach((slide) => {
+                slide.style.display = "none";
             });
 
+            slides[index].style.display = "block";
+        }
+
+        function nextSlide() {
+            currentSlideIndex++;
+            if (currentSlideIndex >= slides.length - 2) {
+                currentSlideIndex = 0;
+            }
+            showSlide(currentSlideIndex);
+        }
+
+        function previousSlide() {
+            currentSlideIndex--;
+            if (currentSlideIndex < 2) {
+                currentSlideIndex = slides.length - 1;
+            }
+            showSlide(currentSlideIndex);
+        }
+
+        setInterval(nextSlide, 9000); // Automatically switch to the next slide every 3 seconds
+
+        // Check if the slideshow should have arrows (previous and next buttons)
+        if (!slideshow.classList.contains("noarrow")) {
+            // Add event listeners for previous and next buttons
+            const slideshowPrevBtn = document.createElement("button");
+            slideshowPrevBtn.innerText = "<";
+            slideshowPrevBtn.classList.add("slideshow-prev-btn");
+            slideshowPrevBtn.addEventListener("click", previousSlide);
+
+            const slideshowNextBtn = document.createElement("button");
+            slideshowNextBtn.innerText = ">";
+            slideshowNextBtn.classList.add("slideshow-next-btn");
+            slideshowNextBtn.addEventListener("click", nextSlide);
+
+            // Append the buttons to the slideshow
+            slideshow.appendChild(slideshowPrevBtn);
+            slideshow.appendChild(slideshowNextBtn);
+        }
+
+        showSlide(currentSlideIndex);
+    });
 
             // Swiping functionality for horizontal slide change
             let touchStartX = 0;
@@ -347,21 +367,21 @@
             // Set the width of the .link-buttons to the width of the image or video
             linkButtons.style.width = media.offsetWidth + 'px';
         });
-        
-          // Function to set the width of .link-buttons relative to media element
-    function adjustLinkButtonsWidth() {
-        const pieces = document.querySelectorAll('.piece');
 
-        pieces.forEach((piece) => {
-            const media = piece.querySelector('img, video, .video-container, .gif-container');
-            const linkButtons = piece.querySelector('.link-buttons');
+        // Function to set the width of .link-buttons relative to media element
+        function adjustLinkButtonsWidth() {
+            const pieces = document.querySelectorAll('.piece');
 
-            linkButtons.style.width = media.offsetWidth + 'px';
-        });
-    }
+            pieces.forEach((piece) => {
+                const media = piece.querySelector('img, video, .video-container, .gif-container');
+                const linkButtons = piece.querySelector('.link-buttons');
 
-    // Call the function on page load and when the window is resized
-    window.addEventListener("load", adjustLinkButtonsWidth);
-    window.addEventListener("resize", adjustLinkButtonsWidth);
+                linkButtons.style.width = media.offsetWidth + 'px';
+            });
+        }
+
+        // Call the function on page load and when the window is resized
+        window.addEventListener("load", adjustLinkButtonsWidth);
+        window.addEventListener("resize", adjustLinkButtonsWidth);
     </script>
 </html>
