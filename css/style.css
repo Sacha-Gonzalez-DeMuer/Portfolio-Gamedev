@@ -443,7 +443,7 @@ background-color: #ed1651; color: white;}
 
 
 
-@media screen and (max-width: 1024px) and (orientation: portrait) {
+@media screen and (max-width: 1468px) or (orientation: portrait) {
     body {
         overflow: auto;
     }
