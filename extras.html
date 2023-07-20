@@ -5,6 +5,23 @@
     <title>Sacha Gonzalez De Muer | Misc Projects</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="images/illustraties/vault-boys/vault%20me.png"/>
+      <script>
+            // Function to update the button text based on screen size
+            function updateButtonText() {
+                const downloadButton = document.querySelector(".navbar-download-button");
+                const isMobile = window.innerWidth <= 1024; // Adjust the screen width as needed
+
+                if (isMobile) {
+                    downloadButton.textContent = "CV";
+                } else {
+                    downloadButton.textContent = "DOWNLOAD CV";
+                }
+            }
+
+            // Call the function on page load and when the window is resized
+            window.addEventListener("load", updateButtonText);
+            window.addEventListener("resize", updateButtonText);
+        </script>
 </head>
 
 <body>

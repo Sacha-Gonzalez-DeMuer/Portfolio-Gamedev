@@ -5,6 +5,24 @@
         <title>Sacha Gonzalez De Muer | C++ Projects</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="images/illustraties/vault-boys/vault%20me.png"/>
+
+        <script>
+            // Function to update the button text based on screen size
+            function updateButtonText() {
+                const downloadButton = document.querySelector(".navbar-download-button");
+                const isMobile = window.innerWidth <= 1024; // Adjust the screen width as needed
+
+                if (isMobile) {
+                    downloadButton.textContent = "CV";
+                } else {
+                    downloadButton.textContent = "DOWNLOAD CV";
+                }
+            }
+
+            // Call the function on page load and when the window is resized
+            window.addEventListener("load", updateButtonText);
+            window.addEventListener("resize", updateButtonText);
+        </script>
     </head>
 
     <body>
@@ -26,22 +44,27 @@
         </div>
 
         <main>
-            <div id="slideshow-container">
+
+            <div id="slideshow-container" class="slider-container">
                 <div class="piece-container">
-                    <h1>&gt; Hop King</h1>
-                    <div class="piece" id="hopking">
+                    <div class="piece-title">
+                        <h1>> Hop King</h1>
+                    </div>
+                    <div class="piece" id="hopking">  
                         <div class="video-container">
                             <div class="embed-responsive">
-                                <iframe width="920" height="480" class="embed-responsive-item" src="https://www.youtube.com/embed/ayLXqarl1Rk"
+                                <iframe width="1280" height="576" class="embed-responsive-item" src="https://www.youtube.com/embed/ayLXqarl1Rk"
                                         title="Banjo: Hop King - Trailer" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen></iframe>
+                                        allowfullscreen> </iframe>
                             </div>
+
                             <div class="link-buttons">
                                 <a href="https://github.com/Sacha-Gonzalez-DeMuer/HopKing-Remake" class="button git-link-btn">GitHub</a>
                                 <a href="/path-to-download" class="button download-demo-btn">Download Demo</a>
                             </div>
                         </div>
+
                         <div id="piece-txt">
                             <h2>About</h2>
                             <p>
@@ -62,7 +85,9 @@
             </div>
 
             <div class="piece-container">
-                <h1>&gt; GP Zombie Survivor AI</h1>
+                <div class="piece-title">
+                    <h1>&gt; GP Zombie Survivor AI</h1>
+                </div>
                 <div class="piece" id="zombieai">
                     <div class="slideshow-box">
                         <div class="slideshow">
@@ -105,16 +130,18 @@
             </div>
 
             <div class="piece-container">
-                <h1>&gt; Monte Carlo Search Tree</h1>
-                <div class="piece" id="mcts">
-                    <div class="video-container">
-                        <img src="images/gif/mcts.gif" alt="GP Research GIF"> 
+                <div class="piece-title">
 
+                    <h1>&gt; Monte Carlo Search Tree</h1>
+                </div>
+                <div class="piece" id="mcts">
+                    <div class="slideshow-box">
+                        <img src="images/gif/mcts.gif" alt="GP Research GIF"> 
                         <div class="link-buttons">
-                            <a href="https://github.com/Sacha-Gonzalez-DeMuer/GPP_MonteCarloSearchTree" target="_blank" class="button git-link-btn">GitHub</a>
+                            <a href="https://github.com/Sacha-Gonzalez-DeMuer/GPP_Exam_ZombieGame" class="button git-link-btn">GitHub</a>
+                            <a href="files/demos/" class="button download-demo-btn">Download Demo</a>
                         </div>
                     </div>
-
                     <div id="piece-txt">
                         <h2>About</h2>
                         <p>
@@ -126,37 +153,34 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="piece-container">
-                <h1>&gt; MK2D Engine </h1> 
-                <div class="piece" id="mcts">
-                    <div class="video-container">
-                        <img width=1320; src="images/logos/mk2d-banner.png" alt="GP Research GIF"> 
-                           
+                <div class="piece-title">
+                    <h1>&gt;  MK2D Game Engine</h1>
+                </div>
+                <div class="piece" id="mk2d">
+                    <div class="slideshow-box">
+                        <img  src="images/logos/mk2d-banner-01.png" alt="GP Research GIF"> 
+                        <div class="link-buttons">
+                            <a href="https://github.com/Sacha-Gonzalez-DeMuer/GPP_MonteCarloSearchTree" target="_blank" class="button git-link-btn">GitHub</a>
+                        </div>
+                    </div>
+
+
                     <div id="piece-txt">
-                         <a href="https://github.com/Sacha-Gonzalez-DeMuer/MK2D-Engine" target="_blank" class="button git-link-btn">GitHub</a>
-                        
                         <h2>About</h2>
                         <p>
-                            MK2D is a lightweight 2D game development engine. The goal of this project was to learn and apply programming patterns. 
+                            MK2D is a lightweight 2d game development engine which focuses on providing functionality that should feel familiar to Unity developers, it provides similar interfaces as unity for crucial functionalities in gameobjects and the scenegraph as well as time, delegates and collision.
+                            <br><br>
+                            More information on relevant design decisions can be found on the <a href="https://github.com/Sacha-Gonzalez-DeMuer/MK2D-Engine">Git ReadMe</a> page.
                         </p>
-                        
-                         <h3>
-                            • Component System<br>
-                            • Delegates<br>
-                            • Commands<br>
-                            • Input system with controller support<br>
-                            • Component System<br>
-                            • Sound service locator<br>
-                        </h3>
                         <div class="tags">
                             <span class="tag tag-cpp">C++</span>
                         </div>
                     </div>
-                    </div>
-
                 </div>
             </div>
+
 
             </div>
 
@@ -173,7 +197,7 @@
             <button class="overview-btn" onclick="scrollToSlide(2)">
                 <img src="images/logos/mcts.png" alt="mcts" data-slide-index="2">
             </button>
-             <button class="overview-btn" onclick="scrollToSlide(2)">
+            <button class="overview-btn" onclick="scrollToSlide(2)">
                 <img src="images/logos/mk2d.png" alt="mk2d" data-slide-index="2">
             </button>
             <div class="btn-container">
@@ -184,6 +208,7 @@
 
     <script src="path/to/lightbox.js"></script>
     <script>
+
         document.addEventListener("DOMContentLoaded", function () {
             const container = document.getElementById("slideshow-container");
             const pieceContainers = Array.from(document.getElementsByClassName("piece-container"));
@@ -196,12 +221,12 @@
             function scrollToSlide(index) {
                 if (index >= 0 && index < pieceContainers.length) {
                     container.scrollTo({
-                        left: pieceContainers[index].offsetLeft,
-                        behavior: "smooth"
+                        left: pieceContainers[index].offsetLeft - container.offsetWidth / 2 + pieceContainers[index].offsetWidth / 2,
+                        behavior: "smooth",
                     });
 
                     // Remove active class from all buttons
-                    overviewButtons.forEach(btn => btn.classList.remove("active"));
+                    overviewButtons.forEach((btn) => btn.classList.remove("active"));
 
                     // Add active class to the corresponding button
                     overviewButtons[index].classList.add("active");
@@ -279,6 +304,64 @@
 
                 showSlide(currentSlideIndex);
             });
+
+
+            // Swiping functionality for horizontal slide change
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            container.addEventListener("touchstart", (event) => {
+                touchStartX = event.touches[0].clientX;
+            });
+
+            container.addEventListener("touchmove", (event) => {
+                touchEndX = event.touches[0].clientX;
+            });
+
+            container.addEventListener("touchend", () => {
+                if (touchEndX - touchStartX > 50) {
+                    // Swiped left to right (previous slide)
+                    if (currentSlide > 0) {
+                        scrollToSlide(currentSlide - 1);
+                    }
+                } else if (touchStartX - touchEndX > 50) {
+                    // Swiped right to left (next slide)
+                    if (currentSlide < pieceContainers.length - 1) {
+                        scrollToSlide(currentSlide + 1);
+                    }
+                }
+            });
         });
+
+        // Get all the .piece elements
+        var pieces = document.querySelectorAll('.piece');
+
+        // Loop through each .piece
+        pieces.forEach(function(piece) {
+            // Get the image or video within the .piece
+            var media = piece.querySelector('img, video, .video-container, .gif-container');
+
+            // Get the .link-buttons within the .piece
+            var linkButtons = piece.querySelector('.link-buttons');
+
+            // Set the width of the .link-buttons to the width of the image or video
+            linkButtons.style.width = media.offsetWidth + 'px';
+        });
+        
+          // Function to set the width of .link-buttons relative to media element
+    function adjustLinkButtonsWidth() {
+        const pieces = document.querySelectorAll('.piece');
+
+        pieces.forEach((piece) => {
+            const media = piece.querySelector('img, video, .video-container, .gif-container');
+            const linkButtons = piece.querySelector('.link-buttons');
+
+            linkButtons.style.width = media.offsetWidth + 'px';
+        });
+    }
+
+    // Call the function on page load and when the window is resized
+    window.addEventListener("load", adjustLinkButtonsWidth);
+    window.addEventListener("resize", adjustLinkButtonsWidth);
     </script>
 </html>
