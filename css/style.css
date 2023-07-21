@@ -447,7 +447,6 @@ background-color: #ed1651; color: white;}
     body {
         overflow: auto;
     }
-
     .button {
         padding: 50px 50px;
         margin: 100px 0 100px 0;
@@ -580,7 +579,17 @@ background-color: #ed1651; color: white;}
     }
 
     .link-buttons {
-        text-align: center;
+    /* Remove the absolute positioning */
+    /* position: absolute; */
+
+    /* Add these flexbox properties */
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+    
+    .link-buttons a {
+        font-size: 40px;
     }
 /* Optional: Adjust the padding or margin for the tags to avoid overlapping with the iframe */
 .tags {
@@ -745,9 +754,6 @@ background-color: #ed1651; color: white;}
         padding: 20px 20px;
     }
 
-    .link-buttons {
-        text-align: center;
-    }
 /* Optional: Adjust the padding or margin for the tags to avoid overlapping with the iframe */
 .tags {
     font-size: 16px;
@@ -759,6 +765,7 @@ background-color: #ed1651; color: white;}
         border-radius: 0px;
         margin-right: 5px;
     }
+    
 
     #slideshow-container {
         height: 90vh;
@@ -771,7 +778,10 @@ background-color: #ed1651; color: white;}
     height: 100%; /* Make the iframe responsive */
     max-height: 100%; /* Allow the iframe to scale down while maintaining aspect ratio */
 }
-
+.slideshow video {
+    width: 100%;
+    height: auto;
+}
 }
 </style>
 
