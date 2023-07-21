@@ -56,7 +56,8 @@
                                 <iframe width="1280" height="576" class="embed-responsive-item" src="https://www.youtube.com/embed/ayLXqarl1Rk"
                                         title="Banjo: Hop King - Trailer" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen> </iframe>
+                                        allowfullscreen> 
+                                </iframe>
                             </div>
 
                             <div class="link-buttons">
@@ -272,59 +273,59 @@
             });
 
             // Slideshow functionality
-    const slideshows = Array.from(document.querySelectorAll(".slideshow"));
+            const slideshows = Array.from(document.querySelectorAll(".slideshow"));
 
-    slideshows.forEach((slideshow) => {
-        const slides = Array.from(slideshow.children);
+            slideshows.forEach((slideshow) => {
+                const slides = Array.from(slideshow.children);
 
-        let currentSlideIndex = 0;
+                let currentSlideIndex = 0;
 
-        function showSlide(index) {
-            slides.forEach((slide) => {
-                slide.style.display = "none";
+                function showSlide(index) {
+                    slides.forEach((slide) => {
+                        slide.style.display = "none";
+                    });
+
+                    slides[index].style.display = "block";
+                }
+
+                function nextSlide() {
+                    currentSlideIndex++;
+                    if (currentSlideIndex >= slides.length - 2) {
+                        currentSlideIndex = 0;
+                    }
+                    showSlide(currentSlideIndex);
+                }
+
+                function previousSlide() {
+                    currentSlideIndex--;
+                    if (currentSlideIndex < 2) {
+                        currentSlideIndex = slides.length - 1;
+                    }
+                    showSlide(currentSlideIndex);
+                }
+
+                setInterval(nextSlide, 9000); // Automatically switch to the next slide every 3 seconds
+
+                // Check if the slideshow should have arrows (previous and next buttons)
+                if (!slideshow.classList.contains("noarrow")) {
+                    // Add event listeners for previous and next buttons
+                    const slideshowPrevBtn = document.createElement("button");
+                    slideshowPrevBtn.innerText = "<";
+                    slideshowPrevBtn.classList.add("slideshow-prev-btn");
+                    slideshowPrevBtn.addEventListener("click", previousSlide);
+
+                    const slideshowNextBtn = document.createElement("button");
+                    slideshowNextBtn.innerText = ">";
+                    slideshowNextBtn.classList.add("slideshow-next-btn");
+                    slideshowNextBtn.addEventListener("click", nextSlide);
+
+                    // Append the buttons to the slideshow
+                    slideshow.appendChild(slideshowPrevBtn);
+                    slideshow.appendChild(slideshowNextBtn);
+                }
+
+                showSlide(currentSlideIndex);
             });
-
-            slides[index].style.display = "block";
-        }
-
-        function nextSlide() {
-            currentSlideIndex++;
-            if (currentSlideIndex >= slides.length - 2) {
-                currentSlideIndex = 0;
-            }
-            showSlide(currentSlideIndex);
-        }
-
-        function previousSlide() {
-            currentSlideIndex--;
-            if (currentSlideIndex < 2) {
-                currentSlideIndex = slides.length - 1;
-            }
-            showSlide(currentSlideIndex);
-        }
-
-        setInterval(nextSlide, 9000); // Automatically switch to the next slide every 3 seconds
-
-        // Check if the slideshow should have arrows (previous and next buttons)
-        if (!slideshow.classList.contains("noarrow")) {
-            // Add event listeners for previous and next buttons
-            const slideshowPrevBtn = document.createElement("button");
-            slideshowPrevBtn.innerText = "<";
-            slideshowPrevBtn.classList.add("slideshow-prev-btn");
-            slideshowPrevBtn.addEventListener("click", previousSlide);
-
-            const slideshowNextBtn = document.createElement("button");
-            slideshowNextBtn.innerText = ">";
-            slideshowNextBtn.classList.add("slideshow-next-btn");
-            slideshowNextBtn.addEventListener("click", nextSlide);
-
-            // Append the buttons to the slideshow
-            slideshow.appendChild(slideshowPrevBtn);
-            slideshow.appendChild(slideshowNextBtn);
-        }
-
-        showSlide(currentSlideIndex);
-    });
 
             // Swiping functionality for horizontal slide change
             let touchStartX = 0;
@@ -383,5 +384,74 @@
         // Call the function on page load and when the window is resized
         window.addEventListener("load", adjustLinkButtonsWidth);
         window.addEventListener("resize", adjustLinkButtonsWidth);
+
+        // Function to check if the current screen size is mobile or desktop
+        function isMobileScreen() {
+            return window.innerWidth <= 767; // Adjust the width breakpoint as needed for mobile devices
+        }
+
+        // Function to move the link buttons to a higher position (under the piece-txt div) for small screens
+        function moveLinkButtonsToHigherPosition() {
+            if (window.innerWidth < 1400) {
+                const pieces = document.querySelectorAll('.piece');
+
+                pieces.forEach((piece) => {
+                    const pieceTxt = piece.querySelector('#piece-txt');
+                    const linkButtons = piece.querySelector('.link-buttons');
+
+                    // Check if the link buttons are already a child of the piece-txt div
+                    if (!pieceTxt.contains(linkButtons)) {
+                        pieceTxt.appendChild(linkButtons);
+                    }
+                });
+            }
+        }
+
+        // Call the function on page load and when the window is resized
+        window.addEventListener("load", moveLinkButtonsToHigherPosition);
+        window.addEventListener("resize", moveLinkButtonsToHigherPosition);
+
+
+        // Function to move the tags div two divs higher for small screens
+        function moveTagsDivTwoDivsHigher() {
+            if (window.innerWidth < 1400) {
+                const pieces = document.querySelectorAll('.piece');
+
+                pieces.forEach((piece) => {
+                    const pieceTxt = piece.querySelector('#piece-txt');
+                    const tagsDiv = piece.querySelector('.tags');
+
+                    // Check if the tags div is already two divs higher (below the .video-container)
+                    if (pieceTxt.previousElementSibling !== tagsDiv) {
+                        piece.insertBefore(tagsDiv, pieceTxt); // Move the tags div two divs higher
+                    }
+                });
+            }
+        }
+
+        // Call the function on page load and when the window is resized
+        window.addEventListener("load", moveTagsDivTwoDivsHigher);
+        window.addEventListener("resize", moveTagsDivTwoDivsHigher);
+
+        // Function to move the piece-title down one div
+        function movePieceTitleDownOneDiv() {
+            if (window.innerWidth < 1400) {
+                const pieceContainers = document.querySelectorAll('.piece-container');
+
+                pieceContainers.forEach((container) => {
+                    const piece = container.querySelector('.piece');
+                    const pieceTitle = container.querySelector('.piece-title');
+
+                    // Check if the piece-title is already in the desired position (below the piece div)
+                    if (piece.firstElementChild !== pieceTitle) {
+                        piece.insertBefore(pieceTitle, piece.firstElementChild);
+                    }
+                });
+            }
+        }
+
+        // Call the function on page load and when the window is resized
+        window.addEventListener('load', movePieceTitleDownOneDiv);
+        window.addEventListener('resize', movePieceTitleDownOneDiv);
     </script>
 </html>

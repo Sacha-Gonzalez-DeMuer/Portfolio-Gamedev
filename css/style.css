@@ -439,16 +439,20 @@ background-color: #ed1651; color: white;}
     margin: 0 auto;
 }
 
-
-
-
-
-@media screen and (max-width: 1468px) or (orientation: portrait) {
+@media screen and (max-width: 1400px)  {
     body {
         overflow: auto;
     }
-    
-    
+
+    .button {
+        padding: 50px 50px;
+        margin: 100px 0 100px 0;
+        text-decoration: none;
+        border-radius: 55px;
+        margin-right: 10px;
+        transition: background-color 0.3s ease;
+    }
+
     /* New styles for the .content-wrapper */
     .content-wrapper {
         position: relative; /* Ensure .overview is positioned relative to this container */
@@ -484,14 +488,15 @@ background-color: #ed1651; color: white;}
         border-radius: 50%;
         transition: border-color 0.3s ease;
     }
-      .piece {
-        flex-direction: column; /* Arrange elements vertically */
-        align-items: center; /* Center elements horizontally */
-        /* Remove height: auto; */
-    }
-
+    .piece {
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: center; /* Center elements horizontally */
+    height: auto; /* Remove fixed height */
+    max-height: 80vh;
+    overflow: auto;
+}
     .piece-title h1 {
-        font-size: 70px;
+        font-size: 60px;
         text-align: center;
     }
 
@@ -504,15 +509,15 @@ background-color: #ed1651; color: white;}
     }
 
     .piece-container {
-        height: 90%;
         min-width: 100%;
         flex: 0 0 100%;
         scroll-snap-align: start;
+        overflow-y: auto; /* Enable vertical scrolling when content exceeds the container height */
+        max-height: 93%;
     }
 
     #piece-txt {
         text-align: center;
-        overflow: hidden;
         padding: 20px;
         margin-top: 0; /* Reset the margin top */
         margin-bottom: 0; /* Reset the margin bottom */
@@ -521,20 +526,25 @@ background-color: #ed1651; color: white;}
     }
 
     #piece-txt h2 {
-        font-size: 40px;
-        margin-top: 0; /* Reset the margin top */
+        font-size: 60px;
+        margin-top: 0;
     }
-     #piece-txt p {
+
+    #piece-txt h3 {
+        font-size: 55px;
+        margin-top: 200px;
+        overflow: visible;
+    }
+    #piece-txt p {
         font-size: 30px;
-        margin-bottom: 0; /* Reset the margin bottom */
+        margin-bottom: 0; 
     }
 
     .video-container {
-        width: 100%;
-        position: relative;
-        padding-bottom: 5%; /* Adjust this value as needed to raise or lower the video */
-        overflow: hidden;
-    }
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* Adjust this value as needed to maintain the iframe aspect ratio (16:9) */
+}
 
     header {
         display: flex;
@@ -568,13 +578,30 @@ background-color: #ed1651; color: white;}
     .link-buttons {
         text-align: center;
     }
-    .tags {
-        font-size: 
+/* Optional: Adjust the padding or margin for the tags to avoid overlapping with the iframe */
+.tags {
+    font-size: 16px;
+    margin-bottom: 100px; /* Adjust this value as needed */
+}
+
+    .tag {
+        padding: 5px 10px;
+        border-radius: 0px;
+        margin-right: 5px;
     }
+
     #slideshow-container {
         height: 90vh;
     }
-    
+    .embed-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the iframe responsive */
+    height: 100%; /* Make the iframe responsive */
+    max-height: 100%; /* Allow the iframe to scale down while maintaining aspect ratio */
+}
+
 }
 </style>
 
