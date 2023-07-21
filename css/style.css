@@ -338,8 +338,8 @@ background-color: #ed1651; color: white;}
 
 .slideshow-content {
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    height: 100%; /* Set the height to 100% to stretch the content */
+    justify-content: center; 
+    height: 100%; 
 }
 
 .slideshow-content .slide {
@@ -438,7 +438,10 @@ background-color: #ed1651; color: white;}
     position: relative;
     margin: 0 auto;
 }
-
+.slideshow video {
+    width: 1024px;
+    height: 576px;
+}
 
 @media screen and (max-width: 1400px)   {
     body {
@@ -602,7 +605,11 @@ background-color: #ed1651; color: white;}
     height: 100%; /* Make the iframe responsive */
     max-height: 100%; /* Allow the iframe to scale down while maintaining aspect ratio */
 }
-
+.slideshow video {
+    /* Set the width and height to make the video smaller */
+    width: 20%; /* Change this value to your desired width */
+    height: 10%; /* Change this value to your desired height */
+}
 @media screen and (max-width: 1468px) and (orientation: portrait)  {
     body {
         overflow: auto;
@@ -637,18 +644,17 @@ background-color: #ed1651; color: white;}
         margin: 0 5px; /* Adjust the spacing between overview buttons */
     }
 
-    /* Optional: Adjust font size and button sizes for better mobile presentation */
     .overview-btn img {
         max-width: 60px;
         max-height: 60px;
     }
 
     .overview-btn.active img {
-        border: 3px solid var(--orange);
+        border: 10px solid var(--orange);
     }
 
     .overview-btn img {
-        border: 3px solid transparent;
+        border: 10px solid transparent;
         border-radius: 50%;
         transition: border-color 0.3s ease;
     }
