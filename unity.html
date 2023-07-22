@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
     <head>
         <meta charset="UTF-8">
-        <title>Sacha Gonzalez De Muer | Unity Projects</title>
+        <title>Sacha Gonzalez De Muer | C++ Projects</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="images/illustraties/vault-boys/vault%20me.png"/>
-  <script>
+
+        <script>
             // Function to update the button text based on screen size
             function updateButtonText() {
                 const downloadButton = document.querySelector(".navbar-download-button");
@@ -23,6 +24,7 @@
             window.addEventListener("resize", updateButtonText);
         </script>
     </head>
+
     <body>
         <div class="wrapper zwart">
             <header>
@@ -41,103 +43,194 @@
             </header>
         </div>
 
-
         <main>
 
+            <div id="slideshow-container" class="slider-container">
+                <div class="piece-container">
+                    <div class="piece-title">
+                        <h1>> Hop King</h1>
+                    </div>
+                    <div class="piece" id="hopking">  
+                        <div class="video-container">
+                            <div class="embed-responsive">
+                                <iframe width="1280" height="576" class="embed-responsive-item" src="https://www.youtube.com/embed/ayLXqarl1Rk"
+                                        title="Banjo: Hop King - Trailer" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen> 
+                                </iframe>
+                            </div>
 
+                            <div class="link-buttons">
+                                <a href="files/demos/hopking-demo_sachagdm.zip" class="button download-demo-btn">Download Demo</a>
+                            </div>
+                        </div>
 
-            <div id="slideshow-container">
-                <div class="piece-container"> 
-                    <h1>&gt; Hop King</h1>
-                    <div class="piece" id="hopking">
-                        <iframe width="720" height="480" src="https://www.youtube.com/embed/ayLXqarl1Rk" title="Banjo: Hop King - Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         <div id="piece-txt">
-
                             <h2>About</h2>
-                            <p>> Hop King
-                                Hop King holds a special place as one of my initial C++ projects, where I embarked on recreating one of my earlier games originally made in Unity, this time with my own art! It was built using a lightweight SDL framework provided by HowestDAE.  Go and give it a try!
+                            <p>
+                                Hop King in Unity was my first completed game. At the time I was a great Jump King fan and with some extra time on my hand I had set out to make a Jump King copy within a week. The project has a special place in my heart. It made me realize that making games wasn’t something out of reach for me anymore.
+
+
+                            <h3>
+                            </h3>
                             </p>
+                        <div class="tags">
+                            <span class="tag tag-cpp">C++</span>
+                            <span class="tag tag-art">Art</span>
                         </div>
                     </div>
                 </div>
-                <div class="piece-container">                 
+            </div>
+
+            <div class="piece-container">
+                <div class="piece-title">
                     <h1>&gt; Elders Demise</h1>
+                </div>
+                <div class="piece" id="zombieai">
+                    <div class="slideshow-box">
+                        <div class="slideshow">
+                            
+                            <iframe width="1220" height="480" src="https://www.youtube.com/embed/M-Z3W0hYGFA" title="[BACHELOR PROJECT] Elders Demise - Demo Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <a href="images/zombieai/behaviortree.png" data-lightbox="zombieai">
+                                <img width="820" height="480" src="images/zombieai/behaviortree.png" alt="Behavior Tree">
+                            </a>
+                            
+                        </div>
 
-                    <div class="piece" id="eldersdemise">
-                        <iframe width="720" height="480"  src="https://www.youtube.com/embed/M-Z3W0hYGFA" title="[BACHELOR PROJECT] Elders Demise - Demo Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <div id="piece-txt">
-                            <h2>About</h2>
-                            <p>Elders Demise was an ambitious project I undertook as part of my bachelor's program at KdG University of Applied Sciences. Taking inspiration from Arkane Studios' renowned title, Dishonored, I set out to create a game world and story from scratch.</p>
-
-                            <p>This project served as a personal challenge to assess my capabilities and determine if I had the potential to become a professional game developer. Despite still having limited knowledge in the field at the time.</p>
-
-                            <p>Throughout the intensive six-month development period, I encountered numerous challenges, learning about them and solving them only kept fueling my growing passion for game development.</p>
-
+                        <div class="link-buttons">
+                            <a href="files/demos/ELDERS%20DEMISE_%20DEMO%20BUILD.rar" class="button download-demo-btn">Download Demo</a>
+                        </div>
+                    </div>
+                    <div id="piece-txt">
+                        <h2>About</h2>
+                        <p>
+                            Elders Demise was an ambitious solo project I undertook as part of my bachelor's program at KdG University of Applied Sciences. Taking inspiration from Arkane Studios' renowned title, Dishonored, I set out to create a game world and story from scratch. </p>
+                        <p>
+                           
+The demo offers players the flexibility to complete the level in multiple ways: they can choose an aggressive approach, taking a straightforward path to the objective; alternatively, they can opt for a stealthy strategy by infiltrating the enemy outpost; or they can find escapes by exploring the environment using parkour to navigate their way through.</p>
+                        <p>
                             Elders Demise is a significant milestone in my journey. It accelerated my growth as a game developer and I hope to one day tackle this project again.
+                            If you'd like to learn more about the project and explore the Game Design Document, please find it [here]. Thank you for your interest!
 
-                            <p>If you'd like to learn more about the project and explore the Game Design Document, please find it [here]. Thank you for your interest! </p>
+                        </p>
+                        <h3>
+                            • Behavior Tree<br>• Steering Behaviors<br>• Sword Animation system to seamlessly and logically animate slashing<br>• Player combat system<br>• Kung Fu circles<br>• Missions<br>• Stealth System <br>
+                        </h3>
+                        <div class="tags">
+                            <span class="tag tag-cpp">C++</span><br>
+                        </div>
 
-                            </p>
+
                     </div>
                 </div>
             </div>
 
-            <div class="piece-container" id="piece-buddyjumping">
-                <h1>&gt; Buddy Jumping</h1>
+            <div class="piece-container">
+                <div class="piece-title">
 
-                <div class="piece" id="buddyjumping">
-                    <iframe width="720" height="480" src="https://www.youtube.com/embed/fcqpo1HlHwE" title="Project Mechanics - Prototype Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h1>&gt; Buddy Jumping</h1>
+                </div>
+                <div class="piece" id="mcts">
+                    <div class="slideshow-box">
+                        <div class="slideshow">
+
+                            <img src="images/buddyjump/buddy-gameplay.mp4" alt="gameplay"> 
+                        </div>
+                        <div class="link-buttons">
+                            <a href="https://github.com/Sacha-Gonzalez-DeMuer/GPP_Exam_ZombieGame" class="button git-link-btn">GitHub</a>
+                            <a href="files/demos/" class="button download-demo-btn">Download Demo</a>
+                        </div>
+                    </div>
                     <div id="piece-txt">
                         <h2>About</h2>
-
                         <p>
-                            As an intern gameplay programmer at Frosty Froggs, I had the opportunity to design and develop my own game for the company. <p>
-                        <p>This project was a valuable learning experience, teaching me consumer-centric game design and the significance of teamwork and mentorship.</p>
+                            Embarking on a research project as part of the Gameplay Programming course at HowestDAE, I sought to unlock the mysteries of player AI engines. While chess engines fascinate me, I decided to take a different approach and explore the implementation of the Monte Carlo Tree Search (MCTS) algorithm for the game of Connect 4. I investigated strategies for optimizing and improving the model and learned a great deal about the intricacies of adaptive search algorithms and decision-making processes in game-playing AI.
+                            <br><br>
+                            Read about my research on the <a href="https://github.com/Sacha-Gonzalez-DeMuer/MK2D-Engine">ReadMe</a> page.
                         </p>
+
+                        <div class="tags">
+                            <span class="tag tag-cpp">C++</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </div>
 
-        <div class="piece-container">
-            <h1>&gt; Project M</h1>
-            <div class="piece" id="mechanics">
-                <iframe width="720" height="480"  src="https://www.youtube.com/embed/fcqpo1HlHwE" title="Project Mechanics - Prototype Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <div id="piece-txt">
-                    <h2>About</h2>
+            <div class="piece-container">
+                <div class="piece-title">
+                    <h1>&gt;  Project M</h1>
+                </div>
+                <div class="piece" id="mk2d">
+                <div class="video-container">
+                            <div class="embed-responsive">
+                               <iframe width="1280" height="720" src="https://www.youtube.com/embed/fcqpo1HlHwE" title="Project Mechanics - Prototype Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
 
-                    <p> Project Mechanics marked my return to Unity after predominantly focusing on C++ development at HowestDAE. Drawing upon my year of learning at DAE and leveraging my prior experience in developing Elders Demise, Project Mechanics became a platform for me to assess my skills at the time.</p>
+                            <div class="link-buttons">
+                                <a href="files/demos/hopking-demo_sachagdm.zip" class="button download-demo-btn">Download Demo</a>
+                            </div>
+                        </div>
+
+
+                    <div id="piece-txt">
+                        <h2>About</h2>
+                        <p>
+                            Project M is a 
+                        </p>
+
+
+                        <h3>
+                            • Component System<br>
+                            • Scene Graph<br>
+                            • Delegates<br>
+                            • Commands<br>
+                            • Input system with controller support<br>
+                            • Component System<br>
+                            • Sound service locator<br>
+                        </h3>
+
+                        <div class="tags">
+                            <span class="tag tag-cpp">C++</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
 
-    <div class="overview">
-        <div class="btn-container">
-            <button id="prev-btn"><</button>
-                </div>
+
+            </div>
+
+        <div class="overview">
+            <div class="btn-container">
+                <button id="prev-btn">&lt;</button>
+            </div>
             <button class="overview-btn" onclick="scrollToSlide(0)">
                 <img src="images/logos/hopking.png" alt="Hop King" data-slide-index="0">
             </button>
             <button class="overview-btn" onclick="scrollToSlide(1)">
-                <img src="images/logos/eldersdemise.png" alt="Elders Demise" data-slide-index="1">
+                <img src="images/logos/eldersdemise.png" alt="zombieai" data-slide-index="1">
             </button>
             <button class="overview-btn" onclick="scrollToSlide(2)">
-                <img src="images/logos/buddyjumpingpng.png" alt="Buddy Jumping" data-slide-index="2">
+                <img src="images/logos/buddyjumpingpng.png" alt="mcts" data-slide-index="2">
             </button>
-            <button class="overview-btn" onclick="scrollToSlide(3)">
-                <img src="images/logos/projectm.png" alt="Elders' Vendetta" data-slide-index="3">
+            <button class="overview-btn" onclick="scrollToSlide(2)">
+                <img src="images/logos/projectm.png" alt="mk2d" data-slide-index="2">
             </button>
             <div class="btn-container">
-                <button id="next-btn">></button>
+                <button id="next-btn">&gt;</button>
             </div>
         </div>
-
         </main>
+
+    <script src="path/to/lightbox.js"></script>
     <script>
+
         document.addEventListener("DOMContentLoaded", function () {
             const container = document.getElementById("slideshow-container");
             const pieceContainers = Array.from(document.getElementsByClassName("piece-container"));
             const overviewButtons = Array.from(document.getElementsByClassName("overview-btn"));
+
+            let currentSlideIndex = 0;
+            let isVideoPlaying = false; // Variable to track video playback
 
             container.style.width = `${pieceContainers.length * 100}vw`;
 
@@ -146,12 +239,12 @@
             function scrollToSlide(index) {
                 if (index >= 0 && index < pieceContainers.length) {
                     container.scrollTo({
-                        left: pieceContainers[index].offsetLeft,
-                        behavior: "smooth"
+                        left: pieceContainers[index].offsetLeft - container.offsetWidth / 2 + pieceContainers[index].offsetWidth / 2,
+                        behavior: "smooth",
                     });
 
                     // Remove active class from all buttons
-                    overviewButtons.forEach(btn => btn.classList.remove("active"));
+                    overviewButtons.forEach((btn) => btn.classList.remove("active"));
 
                     // Add active class to the corresponding button
                     overviewButtons[index].classList.add("active");
@@ -177,7 +270,195 @@
                     scrollToSlide(currentSlide - 1);
                 }
             });
+
+
+
+
+
+            // Slideshow functionality
+            const slideshows = Array.from(document.querySelectorAll(".slideshow"));
+
+            slideshows.forEach((slideshow) => {
+                const slides = Array.from(slideshow.children);
+
+                let currentSlideIndex = 0;
+
+                function showSlide(index) {
+                    slides.forEach((slide) => {
+                        slide.style.display = "none";
+                    });
+
+                    slides[index].style.display = "block";
+                }
+
+                function nextSlide() {
+                    currentSlideIndex++;
+                    if (currentSlideIndex >= slides.length) {
+                        currentSlideIndex = 0;
+                    }
+                    showSlide(currentSlideIndex);
+                }
+
+                function previousSlide() {
+                    currentSlideIndex--;
+                    if (currentSlideIndex < 2) {
+                        currentSlideIndex = slides.length - 1;
+                    }
+                    showSlide(currentSlideIndex);
+                }
+
+                setInterval(nextSlide, 9000); // Automatically switch to the next slide every 3 seconds
+
+                // Check if the slideshow should have arrows (previous and next buttons)
+                if (!slideshow.classList.contains("noarrow")) {
+                    // Add event listeners for previous and next buttons
+                    const slideshowPrevBtn = document.createElement("button");
+                    slideshowPrevBtn.innerText = "<";
+                    slideshowPrevBtn.classList.add("slideshow-prev-btn");
+                    slideshowPrevBtn.addEventListener("click", previousSlide);
+
+                    const slideshowNextBtn = document.createElement("button");
+                    slideshowNextBtn.innerText = ">";
+                    slideshowNextBtn.classList.add("slideshow-next-btn");
+                    slideshowNextBtn.addEventListener("click", nextSlide);
+
+                    // Append the buttons to the slideshow
+                    slideshow.appendChild(slideshowPrevBtn);
+                    slideshow.appendChild(slideshowNextBtn);
+                }
+
+                showSlide(currentSlideIndex);
+            });
+
+            // Swiping functionality for horizontal slide change
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            container.addEventListener("touchstart", (event) => {
+                touchStartX = event.touches[0].clientX;
+            });
+
+            container.addEventListener("touchmove", (event) => {
+                touchEndX = event.touches[0].clientX;
+            });
+
+            container.addEventListener("touchend", () => {
+                if (touchEndX - touchStartX > 50) {
+                    // Swiped left to right (previous slide)
+                    if (currentSlide > 0) {
+                        scrollToSlide(currentSlide - 1);
+                    }
+                } else if (touchStartX - touchEndX > 50) {
+                    // Swiped right to left (next slide)
+                    if (currentSlide < pieceContainers.length - 1) {
+                        scrollToSlide(currentSlide + 1);
+                    }
+                }
+            });
         });
+
+        // Get all the .piece elements
+        var pieces = document.querySelectorAll('.piece');
+
+        // Loop through each .piece
+        pieces.forEach(function(piece) {
+            // Get the image or video within the .piece
+            var media = piece.querySelector('img, video, .video-container, .gif-container');
+
+            // Get the .link-buttons within the .piece
+            var linkButtons = piece.querySelector('.link-buttons');
+
+            // Set the width of the .link-buttons to the width of the image or video
+            linkButtons.style.width = media.offsetWidth + 'px';
+        });
+
+        // Function to set the width of .link-buttons relative to media element
+          function adjustLinkButtonsWidth() {
+      const activePiece = document.querySelector('.piece.active');
+      if (activePiece) {
+        const media = activePiece.querySelector('img, video, .video-container, .gif-container, iframe');
+        const linkButtons = activePiece.querySelector('.link-buttons');
+        if (media && linkButtons) {
+          linkButtons.style.width = media.offsetWidth + 'px';
+        }
+      }
+    }
+
+
+        // Call the function on page load and when the window is resized
+        window.addEventListener("load", adjustLinkButtonsWidth);
+        window.addEventListener("resize", adjustLinkButtonsWidth);
+
+        // Function to check if the current screen size is mobile or desktop
+        function isMobileScreen() {
+            return window.innerWidth <= 767; // Adjust the width breakpoint as needed for mobile devices
+        }
+
+        // Function to move the link buttons to a higher position (under the piece-txt div) for small screens
+        function moveLinkButtonsToHigherPosition() {
+            if (window.innerWidth < 1400) {
+                const pieces = document.querySelectorAll('.piece');
+
+                pieces.forEach((piece) => {
+                    const pieceTxt = piece.querySelector('#piece-txt');
+                    const linkButtons = piece.querySelector('.link-buttons');
+
+                    // Check if the link buttons are already a child of the piece-txt div
+                    if (!pieceTxt.contains(linkButtons)) {
+                        pieceTxt.appendChild(linkButtons);
+                    }
+                });
+            }
+        }
+
+        // Call the function on page load and when the window is resized
+        window.addEventListener("load", moveLinkButtonsToHigherPosition);
+        window.addEventListener("resize", moveLinkButtonsToHigherPosition);
+
+
+        // Function to move the tags div two divs higher for small screens
+        function moveTagsDivTwoDivsHigher() {
+            if (window.innerWidth < 1400) {
+                const pieces = document.querySelectorAll('.piece');
+
+                pieces.forEach((piece) => {
+                    const pieceTxt = piece.querySelector('#piece-txt');
+                    const tagsDiv = piece.querySelector('.tags');
+
+                    // Check if the tags div is already two divs higher (below the .video-container)
+                    if (pieceTxt.previousElementSibling !== tagsDiv) {
+                        piece.insertBefore(tagsDiv, pieceTxt); // Move the tags div two divs higher
+                    }
+                });
+            }
+        }
+
+        // Call the function on page load and when the window is resized
+        window.addEventListener("load", moveTagsDivTwoDivsHigher);
+        window.addEventListener("resize", moveTagsDivTwoDivsHigher);
+
+        // Function to move the piece-title down one div
+        function movePieceTitleDownOneDiv() {
+            if (window.innerWidth < 1400) {
+                const pieceContainers = document.querySelectorAll('.piece-container');
+
+                pieceContainers.forEach((container) => {
+                    const piece = container.querySelector('.piece');
+                    const pieceTitle = container.querySelector('.piece-title');
+
+                    // Check if the piece-title is already in the desired position (below the piece div)
+                    if (piece.firstElementChild !== pieceTitle) {
+                        piece.insertBefore(pieceTitle, piece.firstElementChild);
+                    }
+                });
+            }
+        }
+
+        // Call the function on page load and when the window is resized
+        window.addEventListener('load', movePieceTitleDownOneDiv);
+        window.addEventListener('resize', movePieceTitleDownOneDiv);
+
+
+
     </script>
-    </body>
 </html>
