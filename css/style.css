@@ -168,14 +168,14 @@ background-color: #ed1651; color: white;}
     overflow: hidden;
     white-space: nowrap;
     position: relative;
-    margin: 0 auto; /* Center the slideshow container */
+    margin: 0 auto; 
 }
 .piece-container {
     display: inline-block;
     width: 90vw;
     vertical-align: top;
-    overflow-y: auto; /* Allows vertical scrolling */
-    overflow-x: hidden; /* Prevents horizontal scrolling within each piece-container */
+    overflow-y: auto;
+    overflow-x: hidden; 
 }
 
 .embed-responsive {
@@ -791,7 +791,7 @@ background-color: #ed1651; color: white;}
     
 
     #slideshow-container {
-        height: 90vh;
+        height: 100vh;
     }
     .embed-responsive iframe {
     position: absolute;
