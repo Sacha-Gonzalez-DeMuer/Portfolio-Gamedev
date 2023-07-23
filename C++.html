@@ -53,11 +53,7 @@
                     <div class="piece" id="hopking">  
                         <div class="video-container">
                             <div class="embed-responsive">
-                                <iframe width="1280" height="576" class="embed-responsive-item" src="https://www.youtube.com/embed/ayLXqarl1Rk"
-                                        title="Banjo: Hop King - Trailer" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen> 
-                                </iframe>
+                               <iframe width="1280" height="720" src="https://www.youtube.com/embed/YPf-1qK7gQg" title="Banjo: Return of Hop King - Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
 
                             <div class="link-buttons">
@@ -564,28 +560,20 @@
         window.addEventListener("load", moveTagsDivTwoDivsHigher);
         window.addEventListener("resize", moveTagsDivTwoDivsHigher);
 
-        // Function to move the piece-title down one div
-        function movePieceTitleDownOneDiv() {
-            if (window.innerWidth < 1400) {
-                const pieceContainers = document.querySelectorAll('.piece-container');
+        // Move the download buttons div under piece-txt on mobile devices (width < 1400px)
+        function adjustLayoutOnMobile() {
+            const pieceContainer = document.querySelector(".piece-container");
+            const linkButtonsMobile = document.querySelector(".link-buttons.mobile");
 
-                pieceContainers.forEach((container) => {
-                    const piece = container.querySelector('.piece');
-                    const pieceTitle = container.querySelector('.piece-title');
-
-                    // Check if the piece-title is already in the desired position (below the piece div)
-                    if (piece.firstElementChild !== pieceTitle) {
-                        piece.insertBefore(pieceTitle, piece.firstElementChild);
-                    }
-                });
+            if (window.innerWidth < 1400 && linkButtonsMobile) {
+                pieceContainer.appendChild(linkButtonsMobile);
             }
         }
 
-        // Call the function on page load and when the window is resized
-        window.addEventListener('load', movePieceTitleDownOneDiv);
-        window.addEventListener('resize', movePieceTitleDownOneDiv);
-        
-        
+        // Call the function on page load and whenever the window is resized
+        window.addEventListener("load", adjustLayoutOnMobile);
+        window.addEventListener("resize", adjustLayoutOnMobile);
+
         
     </script>
 </html>

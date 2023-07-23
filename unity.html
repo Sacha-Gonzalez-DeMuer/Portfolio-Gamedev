@@ -74,10 +74,6 @@
                             <h3>
                             </h3>
                             </p>
-                        <div class="tags">
-                            <span class="tag tag-cpp">C++</span>
-                            <span class="tag tag-art">Art</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -91,8 +87,8 @@
                         <div class="slideshow">
                             
                             <iframe width="1220" height="480" src="https://www.youtube.com/embed/M-Z3W0hYGFA" title="[BACHELOR PROJECT] Elders Demise - Demo Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <a href="images/zombieai/behaviortree.png" data-lightbox="zombieai">
-                                <img width="820" height="480" src="images/zombieai/behaviortree.png" alt="Behavior Tree">
+                            <a href="images/elders/elders-behaviortree.png" data-lightbox="zombieai">
+                                <img width="820" height="480" src="images/elders/elders-behaviortree-PARTLY.png" alt="Behavior Tree">
                             </a>
                             
                         </div>
@@ -116,10 +112,6 @@ The demo offers players the flexibility to complete the level in multiple ways: 
                         <h3>
                             • Behavior Tree<br>• Steering Behaviors<br>• Sword Animation system to seamlessly and logically animate slashing<br>• Player combat system<br>• Kung Fu circles<br>• Missions<br>• Stealth System <br>
                         </h3>
-                        <div class="tags">
-                            <span class="tag tag-cpp">C++</span><br>
-                        </div>
-
 
                     </div>
                 </div>
@@ -132,71 +124,27 @@ The demo offers players the flexibility to complete the level in multiple ways: 
                 </div>
                 <div class="piece" id="mcts">
                     <div class="slideshow-box">
-                        <div class="slideshow">
-
-                            <img src="images/buddyjump/buddy-gameplay.mp4" alt="gameplay"> 
+                          <div class="slideshow">
+                            
+                        <iframe width="920" height="650" src="https://www.youtube.com/embed/dsJPuYGrH9Y" title="Buddy Jumping - Prototype Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                         <div class="link-buttons">
-                            <a href="https://github.com/Sacha-Gonzalez-DeMuer/GPP_Exam_ZombieGame" class="button git-link-btn">GitHub</a>
-                            <a href="files/demos/" class="button download-demo-btn">Download Demo</a>
+                            <a href="files/demos/buddyjumping_demobuild.apk" class="button download-demo-btn">Download Demo</a>
                         </div>
                     </div>
                     <div id="piece-txt">
                         <h2>About</h2>
                         <p>
-                            Embarking on a research project as part of the Gameplay Programming course at HowestDAE, I sought to unlock the mysteries of player AI engines. While chess engines fascinate me, I decided to take a different approach and explore the implementation of the Monte Carlo Tree Search (MCTS) algorithm for the game of Connect 4. I investigated strategies for optimizing and improving the model and learned a great deal about the intricacies of adaptive search algorithms and decision-making processes in game-playing AI.
-                            <br><br>
-                            Read about my research on the <a href="https://github.com/Sacha-Gonzalez-DeMuer/MK2D-Engine">ReadMe</a> page.
+                           As an intern gameplay programmer at Frosty Froggs, I had the exciting chance to design and develop my own game for the company. Buddy Jumping is a semi-casual mobile game where you must climb to the finish with your clumsy buddy. 
                         </p>
-
-                        <div class="tags">
-                            <span class="tag tag-cpp">C++</span>
-                        </div>
+                         <p>
+                           The game features an active ragdoll and makes use of the <a href="https://assetstore.unity.com/packages/tools/physics/obi-rope-55579">Obi Rope</a> package to handle rope simulations.
+                        </p>
+                        
                     </div>
                 </div>
             </div>
-
-            <div class="piece-container">
-                <div class="piece-title">
-                    <h1>&gt;  Project M</h1>
-                </div>
-                <div class="piece" id="mk2d">
-                <div class="video-container">
-                            <div class="embed-responsive">
-                               <iframe width="1280" height="720" src="https://www.youtube.com/embed/fcqpo1HlHwE" title="Project Mechanics - Prototype Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="link-buttons">
-                                <a href="files/demos/hopking-demo_sachagdm.zip" class="button download-demo-btn">Download Demo</a>
-                            </div>
-                        </div>
-
-
-                    <div id="piece-txt">
-                        <h2>About</h2>
-                        <p>
-                            Project M is a 
-                        </p>
-
-
-                        <h3>
-                            • Component System<br>
-                            • Scene Graph<br>
-                            • Delegates<br>
-                            • Commands<br>
-                            • Input system with controller support<br>
-                            • Component System<br>
-                            • Sound service locator<br>
-                        </h3>
-
-                        <div class="tags">
-                            <span class="tag tag-cpp">C++</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+            
             </div>
 
         <div class="overview">
@@ -211,9 +159,6 @@ The demo offers players the flexibility to complete the level in multiple ways: 
             </button>
             <button class="overview-btn" onclick="scrollToSlide(2)">
                 <img src="images/logos/buddyjumpingpng.png" alt="mcts" data-slide-index="2">
-            </button>
-            <button class="overview-btn" onclick="scrollToSlide(2)">
-                <img src="images/logos/projectm.png" alt="mk2d" data-slide-index="2">
             </button>
             <div class="btn-container">
                 <button id="next-btn">&gt;</button>
@@ -415,23 +360,29 @@ The demo offers players the flexibility to complete the level in multiple ways: 
         window.addEventListener("load", moveLinkButtonsToHigherPosition);
         window.addEventListener("resize", moveLinkButtonsToHigherPosition);
 
+  // Function to move the tags div two divs higher for small screens
+    function moveTagsDivTwoDivsHigher() {
+        if (window.innerWidth < 1400) {
+            const pieces = document.querySelectorAll('.piece');
 
-        // Function to move the tags div two divs higher for small screens
-        function moveTagsDivTwoDivsHigher() {
-            if (window.innerWidth < 1400) {
-                const pieces = document.querySelectorAll('.piece');
+            pieces.forEach((piece) => {
+                const pieceTxt = piece.querySelector('#piece-txt');
+                const tagsDiv = piece.querySelector('.tags');
 
-                pieces.forEach((piece) => {
-                    const pieceTxt = piece.querySelector('#piece-txt');
-                    const tagsDiv = piece.querySelector('.tags');
-
-                    // Check if the tags div is already two divs higher (below the .video-container)
-                    if (pieceTxt.previousElementSibling !== tagsDiv) {
-                        piece.insertBefore(tagsDiv, pieceTxt); // Move the tags div two divs higher
+                // Check if the tags div is already two divs higher (below the .video-container)
+                if (pieceTxt.previousElementSibling !== tagsDiv) {
+                    const videoContainer = piece.querySelector('.video-container');
+                    if (videoContainer) {
+                        const targetPosition = pieceTxt.previousElementSibling;
+                        targetPosition.parentNode.insertBefore(tagsDiv, targetPosition.nextSibling);
+                    } else {
+                        piece.insertBefore(tagsDiv, pieceTxt); // Move the tags div below the piece-txt div
                     }
-                });
-            }
+                }
+            });
         }
+    }
+
 
         // Call the function on page load and when the window is resized
         window.addEventListener("load", moveTagsDivTwoDivsHigher);

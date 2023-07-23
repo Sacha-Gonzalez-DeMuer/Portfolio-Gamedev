@@ -620,7 +620,29 @@ background-color: #ed1651; color: white;}
     width: 20%; /* Change this value to your desired width */
     height: 10%; /* Change this value to your desired height */
 }
+    
+    /* Styles for desktop buttons (visible on screens with width 1400px or more) */
+.link-buttons.desktop {
+    display: block;
+}
+
+/* Styles for mobile buttons (visible on screens with width less than 1400px) */
+.link-buttons.mobile {
+    display: none;
+}
+
 @media screen and (max-width: 1468px) and (orientation: portrait)  {
+    
+       /* Hide desktop buttons on smaller screens */
+    .link-buttons.desktop {
+        display: none;
+    }
+
+    /* Show mobile buttons on smaller screens */
+    .link-buttons.mobile {
+        display: block;
+    }
+    
     body {
         overflow: auto;
     }
