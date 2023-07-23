@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <title>Sacha Gonzalez De Muer | Misc Projects</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/png" href="images/illustraties/vault-boys/vault%20me.png"/>
-      <script>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sacha Gonzalez De Muer | C++ Projects</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="images/illustraties/vault-boys/vault%20me.png"/>
+
+        <script>
             // Function to update the button text based on screen size
             function updateButtonText() {
                 const downloadButton = document.querySelector(".navbar-download-button");
@@ -22,58 +23,63 @@
             window.addEventListener("load", updateButtonText);
             window.addEventListener("resize", updateButtonText);
         </script>
-</head>
+    </head>
 
-<body>
-<div class="wrapper zwart">
-    <header>
-        <div class="navbar-group">
-            <nav>
-                <ul class="navbar-buttons">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="C++.html">C++</a></li>
-                    <li><a href="unity.html">Unity</a></li>
-                    <li><a href="unrealengine.html">Unreal Engine</a></li>
-                    <li class="active"><a href="extras.html">Extras</a></li>
-                </ul>
-            </nav>
-        </div>
-        <a  href="files/GonzalezDeMuerSacha_CV_2022.pdf" class="navbar-download-button">DOWNLOAD CV</a>
-    </header>
-</div>
-
-<main>
-    <div id="slideshow-container">
-        <div class="piece-container">
-            <h1>&gt; Valorant Agent Info</h1>
-            <div class="piece" id="hopking">
-                <div class="video-container">
-                    <div class="embed-responsive">
-                        <img  width="920" height="480" src="images/valorant-agents/demo.gif" alt="valorant-wpf-demo">
-                    </div>
-                    <div class="link-buttons">
-                        <a href="https://github.com/Sacha-Gonzalez-DeMuer/HopKing-Remake" class="button git-link-btn">GitHub</a>
-                        <a href="/path-to-download" class="button download-demo-btn">Download Demo</a>
-                    </div>
+    <body>
+        <div class="wrapper zwart">
+            <header>
+                <div class="navbar-group">
+                    <nav>
+                        <ul class="navbar-buttons">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="C++.html">C++</a></li>
+                            <li class="active"><a href="unity.html">Unity</a></li>
+                            <li><a href="unrealengine.html">Unreal Engine</a></li>
+                            <li><a href="extras.html">Extras</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <div id="piece-txt">
-                    <h2>About</h2>
-                    <p>
-                       Using WPF and XAML, I set out to create a hero info screen for Valorant. During this exercise, I learned to parse JSONs and make use of online APIs, as well as asynchronous programming in C#. <br><br>To enhance the structure and maintainability of the project, I implemented the MVVM architectural pattern.
-                         <h3><br>• Applied MVVM architectural pattern<br>• JSON parsing <br>• Usage of online APIs
-                    </h3>
-                    </p>
-                    <div class="tags">
-                        <span class="tag tag-csharp">C#</span>
-                        <span class="tag tag-wpf">WPF</span>
-                        <span class="tag tag-xaml">XAML</span>
+                <a  href="files/GonzalezDeMuerSacha_CV_2022.pdf" class="navbar-download-button">DOWNLOAD CV</a>
+            </header>
+        </div>
+
+        <main>
+
+            <div id="slideshow-container" class="slider-container">
+                <div class="piece-container">
+                    <div class="piece-title">
+                        <h1>&gt; Valorant Agent Info</h1>
+                    </div>
+                    <div class="piece" id="hopking">  
+                        <div class="slideshow-box">
+                            <div class="slideshow">
+
+                                <img src="images/valorant-agents/demo.gif" alt="GP Research GIF"> 
+                            </div>
+                            <div class="link-buttons">
+                                <a href="https://github.com/Sacha-Gonzalez-DeMuer/GPP_Exam_ZombieGame" class="button git-link-btn">GitHub</a>
+                            </div>
+                        </div>
+
+                        <div id="piece-txt">
+                            <h2>About</h2>
+                            <p>
+                                Using WPF and XAML, I set out to create a hero info screen for Valorant. During this exercise, I learned to parse JSONs and make use of online APIs, as well as asynchronous programming in C#. <br><br>To enhance the structure and maintainability of the project, I implemented the MVVM architectural pattern.
+                            <h3><br>• Applied MVVM architectural pattern<br>• JSON parsing <br>• Usage of online APIs
+                            </h3>
+                            </p>
+                        <div class="tags">
+                            <span class="tag tag-csharp">C#</span>
+                            <span class="tag tag-wpf">WPF</span>
+                            <span class="tag tag-xaml">XAML</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-    </div>
+            </div>
 
+     
     <div class="overview">
         <div class="btn-container">
             <button id="prev-btn">&lt;</button>
@@ -85,88 +91,95 @@
             <button id="next-btn">&gt;</button>
         </div>
     </div>
-</main>
-        <script src="path/to/lightbox.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const container = document.getElementById("slideshow-container");
-                const pieceContainers = Array.from(document.getElementsByClassName("piece-container"));
-                const overviewButtons = Array.from(document.getElementsByClassName("overview-btn"));
+        </main>
 
-                container.style.width = `${pieceContainers.length * 100}vw`;
+    <script src="path/to/lightbox.js"></script>
+    <script>
 
-                let currentSlide = 0;
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById("slideshow-container");
+            const pieceContainers = Array.from(document.getElementsByClassName("piece-container"));
+            const overviewButtons = Array.from(document.getElementsByClassName("overview-btn"));
 
-                function scrollToSlide(index) {
-                    if (index >= 0 && index < pieceContainers.length) {
-                        container.scrollTo({
-                            left: pieceContainers[index].offsetLeft,
-                            behavior: "smooth"
-                        });
+            let currentSlideIndex = 0;
+            let isVideoPlaying = false; // Variable to track video playback
 
-                        // Remove active class from all buttons
-                        overviewButtons.forEach(btn => btn.classList.remove("active"));
+            container.style.width = `${pieceContainers.length * 100}vw`;
 
-                        // Add active class to the corresponding button
-                        overviewButtons[index].classList.add("active");
+            let currentSlide = 0;
 
-                        currentSlide = index;
-                    }
+            function scrollToSlide(index) {
+                if (index >= 0 && index < pieceContainers.length) {
+                    container.scrollTo({
+                        left: pieceContainers[index].offsetLeft - container.offsetWidth / 2 + pieceContainers[index].offsetWidth / 2,
+                        behavior: "smooth",
+                    });
+
+                    // Remove active class from all buttons
+                    overviewButtons.forEach((btn) => btn.classList.remove("active"));
+
+                    // Add active class to the corresponding button
+                    overviewButtons[index].classList.add("active");
+
+                    currentSlide = index;
+                }
+            }
+
+            overviewButtons.forEach((btn, index) => {
+                btn.addEventListener("click", function () {
+                    scrollToSlide(index);
+                });
+            });
+
+            document.getElementById("next-btn").addEventListener("click", function () {
+                if (currentSlide < pieceContainers.length - 1) {
+                    scrollToSlide(currentSlide + 1);
+                }
+            });
+
+            document.getElementById("prev-btn").addEventListener("click", function () {
+                if (currentSlide > 0) {
+                    scrollToSlide(currentSlide - 1);
+                }
+            });
+
+
+            // Slideshow functionality
+            const slideshows = Array.from(document.querySelectorAll(".slideshow"));
+
+            slideshows.forEach((slideshow) => {
+                const slides = Array.from(slideshow.children);
+
+                let currentSlideIndex = 0;
+
+                function showSlide(index) {
+                    slides.forEach((slide) => {
+                        slide.style.display = "none";
+                    });
+
+                    slides[index].style.display = "block";
                 }
 
-                overviewButtons.forEach((btn, index) => {
-                    btn.addEventListener("click", function () {
-                        scrollToSlide(index);
-                    });
-                });
-
-                document.getElementById("next-btn").addEventListener("click", function () {
-                    if (currentSlide < pieceContainers.length - 1) {
-                        scrollToSlide(currentSlide + 1);
+                function nextSlide() {
+                    currentSlideIndex++;
+                    if (currentSlideIndex >= slides.length) {
+                        currentSlideIndex = 0;
                     }
-                });
+                    showSlide(currentSlideIndex);
+                }
 
-                document.getElementById("prev-btn").addEventListener("click", function () {
-                    if (currentSlide > 0) {
-                        scrollToSlide(currentSlide - 1);
+                function previousSlide() {
+                    currentSlideIndex--;
+                    if (currentSlideIndex < 2) {
+                        currentSlideIndex = slides.length - 1;
                     }
-                });
+                    showSlide(currentSlideIndex);
+                }
 
-                // Slideshow functionality
-                const slideshows = Array.from(document.getElementsByClassName("slideshow"));
+                setInterval(nextSlide, 9000); // Automatically switch to the next slide every 3 seconds
 
-                slideshows.forEach((slideshow) => {
-                    const slides = Array.from(slideshow.children);
-
-                    let currentSlideIndex = 0;
-
-                    function showSlide(index) {
-                        slides.forEach((slide) => {
-                            slide.style.display = "none";
-                        });
-
-                        slides[index].style.display = "block";
-                    }
-
-
-                    function nextSlide() {
-                        currentSlideIndex++;
-                        if (currentSlideIndex >= slides.length -2) {
-                            currentSlideIndex = 0;
-                        }
-                        showSlide(currentSlideIndex);
-                    }
-
-                    function previousSlide() {
-                        currentSlideIndex--;
-                        if (currentSlideIndex < 2) {
-                            currentSlideIndex = slides.length - 1;
-                        }
-                        showSlide(currentSlideIndex);
-                    }
-
-                    setInterval(nextSlide, 9000); // Automatically switch to the next slide every 3 seconds
-
+                // Check if the slideshow should have arrows (previous and next buttons)
+                if (!slideshow.classList.contains("noarrow")) {
                     // Add event listeners for previous and next buttons
                     const slideshowPrevBtn = document.createElement("button");
                     slideshowPrevBtn.innerText = "<";
@@ -178,11 +191,149 @@
                     slideshowNextBtn.classList.add("slideshow-next-btn");
                     slideshowNextBtn.addEventListener("click", nextSlide);
 
+                    // Append the buttons to the slideshow
                     slideshow.appendChild(slideshowPrevBtn);
                     slideshow.appendChild(slideshowNextBtn);
+                }
 
-                    showSlide(currentSlideIndex);
-                });
+                showSlide(currentSlideIndex);
             });
-        </script>
-        </html>
+
+            // Swiping functionality for horizontal slide change
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            container.addEventListener("touchstart", (event) => {
+                touchStartX = event.touches[0].clientX;
+            });
+
+            container.addEventListener("touchmove", (event) => {
+                touchEndX = event.touches[0].clientX;
+            });
+
+            container.addEventListener("touchend", () => {
+                if (touchEndX - touchStartX > 50) {
+                    // Swiped left to right (previous slide)
+                    if (currentSlide > 0) {
+                        scrollToSlide(currentSlide - 1);
+                    }
+                } else if (touchStartX - touchEndX > 50) {
+                    // Swiped right to left (next slide)
+                    if (currentSlide < pieceContainers.length - 1) {
+                        scrollToSlide(currentSlide + 1);
+                    }
+                }
+            });
+        });
+
+        // Get all the .piece elements
+        var pieces = document.querySelectorAll('.piece');
+
+        // Loop through each .piece
+        pieces.forEach(function(piece) {
+            // Get the image or video within the .piece
+            var media = piece.querySelector('img, video, .video-container, .gif-container');
+
+            // Get the .link-buttons within the .piece
+            var linkButtons = piece.querySelector('.link-buttons');
+
+            // Set the width of the .link-buttons to the width of the image or video
+            linkButtons.style.width = media.offsetWidth + 'px';
+        });
+
+        // Function to set the width of .link-buttons relative to media element
+        function adjustLinkButtonsWidth() {
+            const activePiece = document.querySelector('.piece.active');
+            if (activePiece) {
+                const media = activePiece.querySelector('img, video, .video-container, .gif-container, iframe');
+                const linkButtons = activePiece.querySelector('.link-buttons');
+                if (media && linkButtons) {
+                    linkButtons.style.width = media.offsetWidth + 'px';
+                }
+            }
+        }
+
+
+        // Call the function on page load and when the window is resized
+        window.addEventListener("load", adjustLinkButtonsWidth);
+        window.addEventListener("resize", adjustLinkButtonsWidth);
+
+        // Function to check if the current screen size is mobile or desktop
+        function isMobileScreen() {
+            return window.innerWidth <= 767; // Adjust the width breakpoint as needed for mobile devices
+        }
+
+        // Function to move the link buttons to a higher position (under the piece-txt div) for small screens
+        function moveLinkButtonsToHigherPosition() {
+            if (window.innerWidth < 1400) {
+                const pieces = document.querySelectorAll('.piece');
+
+                pieces.forEach((piece) => {
+                    const pieceTxt = piece.querySelector('#piece-txt');
+                    const linkButtons = piece.querySelector('.link-buttons');
+
+                    // Check if the link buttons are already a child of the piece-txt div
+                    if (!pieceTxt.contains(linkButtons)) {
+                        pieceTxt.appendChild(linkButtons);
+                    }
+                });
+            }
+        }
+
+        // Call the function on page load and when the window is resized
+        window.addEventListener("load", moveLinkButtonsToHigherPosition);
+        window.addEventListener("resize", moveLinkButtonsToHigherPosition);
+
+        // Function to move the tags div two divs higher for small screens
+        function moveTagsDivTwoDivsHigher() {
+            if (window.innerWidth < 1400) {
+                const pieces = document.querySelectorAll('.piece');
+
+                pieces.forEach((piece) => {
+                    const pieceTxt = piece.querySelector('#piece-txt');
+                    const tagsDiv = piece.querySelector('.tags');
+
+                    // Check if the tags div is already two divs higher (below the .video-container)
+                    if (pieceTxt.previousElementSibling !== tagsDiv) {
+                        const videoContainer = piece.querySelector('.video-container');
+                        if (videoContainer) {
+                            const targetPosition = pieceTxt.previousElementSibling;
+                            targetPosition.parentNode.insertBefore(tagsDiv, targetPosition.nextSibling);
+                        } else {
+                            piece.insertBefore(tagsDiv, pieceTxt); // Move the tags div below the piece-txt div
+                        }
+                    }
+                });
+            }
+        }
+
+
+        // Call the function on page load and when the window is resized
+        window.addEventListener("load", moveTagsDivTwoDivsHigher);
+        window.addEventListener("resize", moveTagsDivTwoDivsHigher);
+
+        // Function to move the piece-title down one div
+        function movePieceTitleDownOneDiv() {
+            if (window.innerWidth < 1400) {
+                const pieceContainers = document.querySelectorAll('.piece-container');
+
+                pieceContainers.forEach((container) => {
+                    const piece = container.querySelector('.piece');
+                    const pieceTitle = container.querySelector('.piece-title');
+
+                    // Check if the piece-title is already in the desired position (below the piece div)
+                    if (piece.firstElementChild !== pieceTitle) {
+                        piece.insertBefore(pieceTitle, piece.firstElementChild);
+                    }
+                });
+            }
+        }
+
+        // Call the function on page load and when the window is resized
+        window.addEventListener('load', movePieceTitleDownOneDiv);
+        window.addEventListener('resize', movePieceTitleDownOneDiv);
+
+
+
+    </script>
+</html>
