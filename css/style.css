@@ -51,6 +51,22 @@
     font-family: 'Bebas';
     src:url(BebasNeue-Regular.otf);
 }
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Set a negative z-index to place the background behind other elements */
+    overflow: hidden; /* Hide any overflowing content from the binary text */
+}
+
+.background p {
+    color: #F8F8F9;
+    font-size: 24px;
+    font-family: 'quicksand';
+    text-align: center;
+}
 
 body {
     font-family: 'acumin', sans-serif;
@@ -492,12 +508,12 @@ background-color: #ed1651; color: white;}
         transition: border-color 0.3s ease;
     }
     .piece {
-    flex-direction: column; /* Arrange elements vertically */
-    align-items: center; /* Center elements horizontally */
-    height: auto; /* Remove fixed height */
-    max-height: 80vh;
-    overflow: auto;
-}
+        flex-direction: column; /* Arrange elements vertically */
+        align-items: center; /* Center elements horizontally */
+        height: auto; /* Remove fixed height */
+        max-height: 80vh;
+        overflow: auto;
+    }
     .piece-title h1 {
         font-size: 60px;
         text-align: center;
@@ -544,11 +560,11 @@ background-color: #ed1651; color: white;}
     }
 
     .video-container {
-    width: 100%;
+        width: 100%;
         height: auto;
-    position: relative;
-    padding-bottom: 56.25%; /* Adjust this value as needed to maintain the iframe aspect ratio (16:9) */
-}
+        position: relative;
+        padding-bottom: 56.25%; /* Adjust this value as needed to maintain the iframe aspect ratio (16:9) */
+    }
 
     header {
         display: flex;
@@ -580,23 +596,23 @@ background-color: #ed1651; color: white;}
     }
 
     .link-buttons {
-    /* Remove the absolute positioning */
-    /* position: absolute; */
+        /* Remove the absolute positioning */
+        /* position: absolute; */
 
-    /* Add these flexbox properties */
-    display: flex;
-    justify-content: center;
-    margin-top: auto;
-}
-    
+        /* Add these flexbox properties */
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+    }
+
     .link-buttons a {
         font-size: 40px;
     }
-/* Optional: Adjust the padding or margin for the tags to avoid overlapping with the iframe */
-.tags {
-    font-size: 16px;
-    margin-bottom: 100px; /* Adjust this value as needed */
-}
+    /* Optional: Adjust the padding or margin for the tags to avoid overlapping with the iframe */
+    .tags {
+        font-size: 16px;
+        margin-bottom: 100px; /* Adjust this value as needed */
+    }
 
     .tag {
         padding: 5px 10px;
@@ -608,204 +624,204 @@ background-color: #ed1651; color: white;}
         height: 90vh;
     }
     .embed-responsive iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Make the iframe responsive */
-    height: 100%; /* Make the iframe responsive */
-    max-height: 100%; /* Allow the iframe to scale down while maintaining aspect ratio */
-}
-.slideshow video {
-    /* Set the width and height to make the video smaller */
-    width: 20%; /* Change this value to your desired width */
-    height: 10%; /* Change this value to your desired height */
-}
-    
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Make the iframe responsive */
+        height: 100%; /* Make the iframe responsive */
+        max-height: 100%; /* Allow the iframe to scale down while maintaining aspect ratio */
+    }
+    .slideshow video {
+        /* Set the width and height to make the video smaller */
+        width: 20%; /* Change this value to your desired width */
+        height: 10%; /* Change this value to your desired height */
+    }
+
     /* Styles for desktop buttons (visible on screens with width 1400px or more) */
-.link-buttons.desktop {
-    display: block;
-}
-
-/* Styles for mobile buttons (visible on screens with width less than 1400px) */
-.link-buttons.mobile {
-    display: none;
-}
-
-@media screen and (max-width: 1468px) and (orientation: portrait)  {
-    
-       /* Hide desktop buttons on smaller screens */
     .link-buttons.desktop {
+        display: block;
+    }
+
+    /* Styles for mobile buttons (visible on screens with width less than 1400px) */
+    .link-buttons.mobile {
         display: none;
     }
 
-    /* Show mobile buttons on smaller screens */
-    .link-buttons.mobile {
-        display: block;
-    }
-    
-    body {
-        overflow: auto;
-    }
+    @media screen and (max-width: 1468px) and (orientation: portrait)  {
 
-    .button {
-        padding: 50px 50px;
-        margin: 100px 0 100px 0;
-        text-decoration: none;
-        border-radius: 55px;
-        margin-right: 10px;
-        transition: background-color 0.3s ease;
-    }
+        /* Hide desktop buttons on smaller screens */
+        .link-buttons.desktop {
+            display: none;
+        }
 
-    /* New styles for the .content-wrapper */
-    .content-wrapper {
-        position: relative; /* Ensure .overview is positioned relative to this container */
-    }
+        /* Show mobile buttons on smaller screens */
+        .link-buttons.mobile {
+            display: block;
+        }
 
-    .overview {
-        width: 100%;
-        background-color: var(--dark-grey);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        position: absolute;
-        bottom: 0; /* Position the overview at the bottom */
-    }
+        body {
+            overflow: auto;
+        }
 
-    .overview-btn {
-        margin: 0 5px; /* Adjust the spacing between overview buttons */
-    }
+        .button {
+            padding: 50px 50px;
+            margin: 100px 0 100px 0;
+            text-decoration: none;
+            border-radius: 55px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
 
-    .overview-btn img {
-        max-width: 60px;
-        max-height: 60px;
-    }
+        /* New styles for the .content-wrapper */
+        .content-wrapper {
+            position: relative; /* Ensure .overview is positioned relative to this container */
+        }
 
-    .overview-btn.active img {
-        border: 10px solid var(--orange);
-    }
+        .overview {
+            width: 100%;
+            background-color: var(--dark-grey);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0; /* Position the overview at the bottom */
+        }
 
-    .overview-btn img {
-        border: 10px solid transparent;
-        border-radius: 50%;
-        transition: border-color 0.3s ease;
-    }
-    .piece {
-    flex-direction: column; /* Arrange elements vertically */
-    align-items: center; /* Center elements horizontally */
-    height: auto; /* Remove fixed height */
-    max-height: 80vh;
-    overflow: auto;
-}
-    .piece-title h1 {
-        font-size: 60px;
-        text-align: center;
-    }
+        .overview-btn {
+            margin: 0 5px; /* Adjust the spacing between overview buttons */
+        }
 
-    .slider-container {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-    }
+        .overview-btn img {
+            max-width: 60px;
+            max-height: 60px;
+        }
 
-    .piece-container {
-        min-width: 100%;
-        flex: 0 0 100%;
-        scroll-snap-align: start;
-        overflow-y: auto; /* Enable vertical scrolling when content exceeds the container height */
-        max-height: 93%;
-    }
+        .overview-btn.active img {
+            border: 10px solid var(--orange);
+        }
 
-    #piece-txt {
-        text-align: center;
-        padding: 20px;
-        margin-top: 0; /* Reset the margin top */
-        margin-bottom: 0; /* Reset the margin bottom */
-        max-width: none;
-        max-height: none;
-    }
+        .overview-btn img {
+            border: 10px solid transparent;
+            border-radius: 50%;
+            transition: border-color 0.3s ease;
+        }
+        .piece {
+            flex-direction: column; /* Arrange elements vertically */
+            align-items: center; /* Center elements horizontally */
+            height: auto; /* Remove fixed height */
+            max-height: 80vh;
+            overflow: auto;
+        }
+        .piece-title h1 {
+            font-size: 60px;
+            text-align: center;
+        }
 
-    #piece-txt h2 {
-        font-size: 60px;
-        margin-top: 0;
-    }
+        .slider-container {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
 
-    #piece-txt h3 {
-        font-size: 55px;
-        margin-top: 200px;
-        overflow: visible;
-    }
-    #piece-txt p {
-        font-size: 30px;
-        margin-bottom: 0; 
-    }
+        .piece-container {
+            min-width: 100%;
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            overflow-y: auto; /* Enable vertical scrolling when content exceeds the container height */
+            max-height: 93%;
+        }
 
-    .video-container {
-    width: 100%;
-    position: relative;
-    padding-bottom: 56.25%; /* Adjust this value as needed to maintain the iframe aspect ratio (16:9) */
-}
+        #piece-txt {
+            text-align: center;
+            padding: 20px;
+            margin-top: 0; /* Reset the margin top */
+            margin-bottom: 0; /* Reset the margin bottom */
+            max-width: none;
+            max-height: none;
+        }
 
-    header {
-        display: flex;
-        justify-content: center; /* Center the navbar items */
-        align-items: center;
-        width: 100%;
-        height: 160px;
-        margin: 0 auto;
-        font-size: 35px;
+        #piece-txt h2 {
+            font-size: 60px;
+            margin-top: 0;
+        }
+
+        #piece-txt h3 {
+            font-size: 55px;
+            margin-top: 200px;
+            overflow: visible;
+        }
+        #piece-txt p {
+            font-size: 30px;
+            margin-bottom: 0; 
+        }
+
+        .video-container {
+            width: 100%;
+            position: relative;
+            padding-bottom: 56.25%; /* Adjust this value as needed to maintain the iframe aspect ratio (16:9) */
+        }
+
+        header {
+            display: flex;
+            justify-content: center; /* Center the navbar items */
+            align-items: center;
+            width: 100%;
+            height: 160px;
+            margin: 0 auto;
+            font-size: 35px;
+        }
+
+        .navbar-buttons {
+            margin-right: 5vw; /* Add desired distance between buttons */
+        }
+
+        .navbar-buttons li {
+            margin-right: 10px;
+        }
+
+        .navbar-buttons li a {
+            font-size: 35px;
+        }
+
+        .navbar-download-button {
+            font-size: 50px;
+            color: white;
+            background-color: var(--orange);
+            padding: 20px 20px;
+        }
+
+        /* Optional: Adjust the padding or margin for the tags to avoid overlapping with the iframe */
+        .tags {
+            font-size: 16px;
+            margin-bottom: 100px; /* Adjust this value as needed */
+        }
+
+        .tag {
+            padding: 5px 10px;
+            border-radius: 0px;
+            margin-right: 5px;
+        }
+
+
+        #slideshow-container {
+            height: 100vh;
+        }
+        .embed-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* Make the iframe responsive */
+            height: 100%; /* Make the iframe responsive */
+            max-height: 100%; /* Allow the iframe to scale down while maintaining aspect ratio */
+        }
+        .slideshow video {
+            width: 100%;
+            height: auto;
+        }
+
     }
-
-    .navbar-buttons {
-        margin-right: 5vw; /* Add desired distance between buttons */
-    }
-
-    .navbar-buttons li {
-        margin-right: 10px;
-    }
-
-    .navbar-buttons li a {
-        font-size: 35px;
-    }
-
-    .navbar-download-button {
-        font-size: 50px;
-        color: white;
-        background-color: var(--orange);
-        padding: 20px 20px;
-    }
-
-/* Optional: Adjust the padding or margin for the tags to avoid overlapping with the iframe */
-.tags {
-    font-size: 16px;
-    margin-bottom: 100px; /* Adjust this value as needed */
-}
-
-    .tag {
-        padding: 5px 10px;
-        border-radius: 0px;
-        margin-right: 5px;
-    }
-    
-
-    #slideshow-container {
-        height: 100vh;
-    }
-    .embed-responsive iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Make the iframe responsive */
-    height: 100%; /* Make the iframe responsive */
-    max-height: 100%; /* Allow the iframe to scale down while maintaining aspect ratio */
-}
-.slideshow video {
-    width: 100%;
-    height: auto;
-}
-    
-}
-</style>
+    </style>
 
